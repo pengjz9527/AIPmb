@@ -1,0 +1,18 @@
+[
+  {
+    "id": "39f8c953-5fad-43a2-83d7-4e3e730e1cbd",
+    "user_name": "彭楫洲",
+    "product_name": "招银理财-月月宝",
+    "amount": 50000.0,
+    "status": "pending",
+    "created_at": "2026-06-10T23:54:31.703119"
+  },
+  {
+    "id": "dd4037f4-1d41-4776-af56-8c3f527bd249",
+    "user_name": "彭楫洲",
+    "product_name": "现金管理类理财产品",
+    "amount": 1000.0,
+    "status": "pending",
+    "created_at": "2026-06-11T00:27:26.516160"
+  }
+]

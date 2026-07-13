@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmb"
+version = "0.1.0"
+description = "银行个人业务CLI服务接口"
+requires-python = ">=3.10"
+dependencies = [
+    "typer[all]>=0.9.0",
+    "rich>=13.0",
+    "openpyxl>=3.1",
+    "prompt-toolkit>=3.0",
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "dashscope>=1.14.0",
+    "python-multipart>=0.0.6",
+    "websockets>=12.0",
+    "openai>=2.0",
+    "httpx>=0.26.0",
+    "chromadb>=0.5.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+pmb = "pmb.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["pmb*"]

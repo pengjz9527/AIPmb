@@ -1,0 +1,6279 @@
+[
+  {
+    "id": "9511fd6e",
+    "skill_name": "history_today",
+    "user_name": "王小美",
+    "session_id": "mobile_1781058349285",
+    "invoked_at": "2026-06-10T02:25:51.827780+00:00",
+    "duration_ms": 1,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "今天（06-10）没有往年同日交易记录",
+    "api_traces": []
+  },
+  {
+    "id": "6e4b1f10",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781059182306",
+    "invoked_at": "2026-06-10T02:39:44.321349+00:00",
+    "duration_ms": 1,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": []
+  },
+  {
+    "id": "815a9555",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781059182306",
+    "invoked_at": "2026-06-10T02:39:49.506882+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": []
+  },
+  {
+    "id": "42ae60a9",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781059182306",
+    "invoked_at": "2026-06-10T02:39:49.507562+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": []
+  },
+  {
+    "id": "eec5d2fd",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:27:49.197897+00:00",
+    "duration_ms": 46,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 18,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "85a38cc2",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:28:17.515908+00:00",
+    "duration_ms": 14,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d562e690",
+    "skill_name": "income_forecast",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:08.917838+00:00",
+    "duration_ms": 299,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "17e65ff7",
+    "skill_name": "collect_transaction_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:12.909688+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共37条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "3ff2b138",
+    "skill_name": "collect_transaction_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:12.916106+00:00",
+    "duration_ms": 6,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共37条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "dc939db0",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:12.920685+00:00",
+    "duration_ms": 6,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d01bd93a",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:14.976440+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "1736a2ee",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:17.634543+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "8965461b",
+    "skill_name": "income_forecast",
+    "user_name": "王小美",
+    "session_id": "mobile_1781066465471",
+    "invoked_at": "2026-06-10T04:41:22.503617+00:00",
+    "duration_ms": 310,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "579612b4",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:42:45.838523+00:00",
+    "duration_ms": 12,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "27e0c647",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:43:03.134489+00:00",
+    "duration_ms": 6,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "6a805e0a",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:43:18.589210+00:00",
+    "duration_ms": 7,
+    "success": false,
+    "error_message": "账户不存在",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "42f3da63",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:46:15.000923+00:00",
+    "duration_ms": 198,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 157,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "90f2b689",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:48:06.701767+00:00",
+    "duration_ms": 212,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 14,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 163,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "aa13cc7a",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:48:28.618384+00:00",
+    "duration_ms": 17,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "c1c9084b",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-10T04:49:24.068399+00:00",
+    "duration_ms": 240,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 15,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 189,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "4ec42d4c",
+    "skill_name": "collect_product_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781067358356",
+    "invoked_at": "2026-06-10T04:56:00.318316+00:00",
+    "duration_ms": 26,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取98款产品（类别：全部）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 22,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "0fbdefa7",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781075431444",
+    "invoked_at": "2026-06-10T07:10:36.989641+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e10416d9",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "王小美",
+    "session_id": "mobile_1781075431444",
+    "invoked_at": "2026-06-10T07:20:11.583856+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、1个线下商户、0笔信用卡交易+20笔记账交易，共1个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d5fe923b",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-10T08:03:14.288688+00:00",
+    "duration_ms": 48,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "99b5d42f",
+    "skill_name": "history_today",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781079350360",
+    "invoked_at": "2026-06-10T08:16:14.416724+00:00",
+    "duration_ms": 20527,
+    "success": false,
+    "error_message": "name 'api' is not defined",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 26,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 24,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2ff04035",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781079350360",
+    "invoked_at": "2026-06-10T08:17:18.913209+00:00",
+    "duration_ms": 383,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据，识别10类收入来源、10类支出方向，预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "33f13ff5",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781081506237",
+    "invoked_at": "2026-06-10T08:52:14.398137+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "09ca07a9",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781081506237",
+    "invoked_at": "2026-06-10T14:12:41.412957+00:00",
+    "duration_ms": 14,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户暂无持有贷款，无需优化",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 9,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "87b67785",
+    "skill_name": "loan_product_recommendation",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781081506237",
+    "invoked_at": "2026-06-10T14:14:05.781912+00:00",
+    "duration_ms": 27,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户无贷款，月均消费 ¥18,585，可用余额 ¥63,750。匹配 3 款贷款产品推荐。",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 8,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "50cef9ed",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781081506237",
+    "invoked_at": "2026-06-10T14:21:34.527943+00:00",
+    "duration_ms": 24,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "892bc43f",
+    "skill_name": "history_today",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781081506237",
+    "invoked_at": "2026-06-10T15:20:21.344003+00:00",
+    "duration_ms": 28565,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "历史上的今天(06-10)：2025年今日，你收获了第一份工资",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 34,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 24,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 11,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d03e0059",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781108628705",
+    "invoked_at": "2026-06-10T16:23:55.678992+00:00",
+    "duration_ms": 50,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 12,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "c1289f24",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781108628705",
+    "invoked_at": "2026-06-10T16:25:22.222456+00:00",
+    "duration_ms": 19,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "3857f7b7",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781108628705",
+    "invoked_at": "2026-06-10T16:30:23.972180+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "ede51567",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-11T12:56:04.415204+00:00",
+    "duration_ms": 63,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 12,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a0105c4e",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781192328507",
+    "invoked_at": "2026-06-11T15:38:51.179023+00:00",
+    "duration_ms": 93,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、380个线下商户、1457笔信用卡交易+1084笔记账交易，共380个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 36,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 23,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "72ee60d7",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781192328507",
+    "invoked_at": "2026-06-11T15:40:39.851709+00:00",
+    "duration_ms": 32,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "03ddff1d",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781192990583",
+    "invoked_at": "2026-06-11T15:49:53.274299+00:00",
+    "duration_ms": 21,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a249971a",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781192990583",
+    "invoked_at": "2026-06-11T15:51:19.667300+00:00",
+    "duration_ms": 13,
+    "success": false,
+    "error_message": "name 'api' is not defined",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d4c1fa6c",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781192990583",
+    "invoked_at": "2026-06-11T15:53:54.269260+00:00",
+    "duration_ms": 19,
+    "success": false,
+    "error_message": "name 'api' is not defined",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e588b73a",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781193742089",
+    "invoked_at": "2026-06-11T16:02:25.113216+00:00",
+    "duration_ms": 24,
+    "success": false,
+    "error_message": "name 'api' is not defined",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 9,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "9407612f",
+    "skill_name": "collect_account_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781193742089",
+    "invoked_at": "2026-06-11T16:02:28.720045+00:00",
+    "duration_ms": 8,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取2个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "b0006ea1",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781194191830",
+    "invoked_at": "2026-06-11T16:09:56.811298+00:00",
+    "duration_ms": 21,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析贷款「个人一手住房贷款」优化方案：剩余本金¥486,831，年利率2.86%。提前还款建议金额¥43,791，匹配0款低息转贷产品。",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "717980b4",
+    "skill_name": "collect_account_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781195163346",
+    "invoked_at": "2026-06-11T16:26:07.147325+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取2个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "3c0ef406",
+    "skill_name": "history_today",
+    "user_name": "王小美",
+    "session_id": "mobile_1781195163346",
+    "invoked_at": "2026-06-11T16:26:30.202277+00:00",
+    "duration_ms": 22,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "今天（06-12）没有往年同日交易记录",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "34e1c6d3",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781224520602",
+    "invoked_at": "2026-06-12T00:35:24.253441+00:00",
+    "duration_ms": 27,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析贷款「个人一手住房贷款」优化方案：剩余本金¥486,831，年利率2.86%。提前还款建议金额¥43,791，匹配0款低息转贷产品。",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 7,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "1d533901",
+    "skill_name": "history_today",
+    "user_name": "王小美",
+    "session_id": "mobile_1781224520602",
+    "invoked_at": "2026-06-12T00:36:59.956318+00:00",
+    "duration_ms": 26,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "今天（06-12）没有往年同日交易记录",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 11,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "6c010411",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-12T00:38:25.070401+00:00",
+    "duration_ms": 23,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "7789233c",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781228017630",
+    "invoked_at": "2026-06-12T01:34:18.438363+00:00",
+    "duration_ms": 17,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d4ed3db6",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-12T01:58:43.173492+00:00",
+    "duration_ms": 44,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 12,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "8f14f291",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781230814073",
+    "invoked_at": "2026-06-12T02:20:18.754992+00:00",
+    "duration_ms": 27,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 13,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "be6654ea",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781230814073",
+    "invoked_at": "2026-06-12T03:24:41.574974+00:00",
+    "duration_ms": 23,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析贷款「个人一手住房贷款」优化方案：剩余本金¥486,831，年利率2.86%。提前还款建议金额¥43,791，匹配0款低息转贷产品。",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "05c7c50f",
+    "skill_name": "life_recommendation",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781234938415",
+    "invoked_at": "2026-06-12T03:29:01.424165+00:00",
+    "duration_ms": 24,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已构建消费画像（2个标签），匹配8款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d0626948",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781234938415",
+    "invoked_at": "2026-06-12T03:30:20.758263+00:00",
+    "duration_ms": 9,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户暂无持有贷款，无需优化",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "ee2c03aa",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-12T03:35:08.522830+00:00",
+    "duration_ms": 37,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "909fbfed",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781234938415",
+    "invoked_at": "2026-06-12T03:39:27.740534+00:00",
+    "duration_ms": 115,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、380个线下商户、1457笔信用卡交易+1084笔记账交易，共380个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 39,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 36,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "abaabf29",
+    "skill_name": "hidden_habits_explorer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781247643089",
+    "invoked_at": "2026-06-12T07:00:46.817056+00:00",
+    "duration_ms": 168,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析2521笔消费记录，发现5个生活习惯模式，覆盖582个商户，生成2张图表",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 29,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 28,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "178fa526",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-12T07:52:05.835854+00:00",
+    "duration_ms": 48,
+    "success": false,
+    "error_message": "All connection attempts failed",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": []
+  },
+  {
+    "id": "d5fb95dc",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-13T23:03:58.551483+00:00",
+    "duration_ms": 16,
+    "success": false,
+    "error_message": "All connection attempts failed",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": []
+  },
+  {
+    "id": "ec326f4b",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781391470210",
+    "invoked_at": "2026-06-13T23:30:09.803279+00:00",
+    "duration_ms": 22,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 15,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e8b052fc",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781391470210",
+    "invoked_at": "2026-06-13T23:30:38.311765+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "328c06ed",
+    "skill_name": "life_recommendation",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781391470210",
+    "invoked_at": "2026-06-14T07:37:08.713771+00:00",
+    "duration_ms": 28,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已构建消费画像（2个标签），匹配8款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 11,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f2e1212a",
+    "skill_name": "life_recommendation",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781391470210",
+    "invoked_at": "2026-06-14T07:47:29.356891+00:00",
+    "duration_ms": 24,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已构建消费画像（2个标签），匹配8款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "06d3a54a",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781391470210",
+    "invoked_at": "2026-06-14T08:11:22.842560+00:00",
+    "duration_ms": 291,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、380个线下商户、1457笔信用卡交易+1084笔记账交易，共380个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 33,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 220,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "5bf9e57e",
+    "skill_name": "hidden_habits_explorer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781391470210",
+    "invoked_at": "2026-06-14T08:14:01.443668+00:00",
+    "duration_ms": 166,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析2521笔消费记录，发现4个生活习惯模式，覆盖582个商户，生成2张图表",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 31,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 23,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e1f10ad2",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781450258232",
+    "invoked_at": "2026-06-14T15:17:42.905932+00:00",
+    "duration_ms": 9,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "df8e8024",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781450258232",
+    "invoked_at": "2026-06-14T15:17:57.815043+00:00",
+    "duration_ms": 91,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、380个线下商户、1457笔信用卡交易+1084笔记账交易，共380个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 34,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 29,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "0f5137d3",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781450258232",
+    "invoked_at": "2026-06-14T23:30:01.598902+00:00",
+    "duration_ms": 525,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 11,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "5238e49b",
+    "skill_name": "collect_account_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781491164174",
+    "invoked_at": "2026-06-15T02:39:37.746456+00:00",
+    "duration_ms": 70,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取2个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 27,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 22,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "13345494",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781491164174",
+    "invoked_at": "2026-06-15T02:39:37.761981+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 10,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "5ac1448c",
+    "skill_name": "collect_product_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781491164174",
+    "invoked_at": "2026-06-15T02:39:37.800466+00:00",
+    "duration_ms": 41,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取98款产品（类别：全部）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 36,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "0511bdbc",
+    "skill_name": "life_recommendation",
+    "user_name": "王小美",
+    "session_id": "mobile_1781491164174",
+    "invoked_at": "2026-06-15T02:39:43.334059+00:00",
+    "duration_ms": 179,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已构建消费画像（0个标签），匹配8款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 139,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "bba3af5c",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781492481000",
+    "invoked_at": "2026-06-15T03:01:28.603457+00:00",
+    "duration_ms": 13,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d4cf95d7",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T05:45:31.345384+00:00",
+    "duration_ms": 56,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 20,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d640c6be",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T06:09:24.006492+00:00",
+    "duration_ms": 224,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 18,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 162,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "208e0d0f",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T06:58:09.584872+00:00",
+    "duration_ms": 30,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 9,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "eec8998b",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-15T06:59:24.744311+00:00",
+    "duration_ms": 52,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "4b3dddf9",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-15T07:30:24.535346+00:00",
+    "duration_ms": 197,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 15,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 144,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "07d1aedd",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "mobile_1781508790130",
+    "invoked_at": "2026-06-15T07:33:14.262432+00:00",
+    "duration_ms": 12,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cfe9a39b",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T07:34:49.350420+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "58526040",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T07:42:30.879242+00:00",
+    "duration_ms": 16,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d4b3ef5a",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T07:44:02.060383+00:00",
+    "duration_ms": 16,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "1bd73466",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T07:57:16.066047+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d3bbcfc2",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "mobile_1781510907317",
+    "invoked_at": "2026-06-15T08:08:33.203808+00:00",
+    "duration_ms": 48,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 20,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 13,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "b6e487bf",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "mobile_1781510960704",
+    "invoked_at": "2026-06-15T08:09:29.080520+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "4e222be2",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T08:11:19.271566+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "15162d3d",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-15T10:40:52.046624+00:00",
+    "duration_ms": 34,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f5b316fe",
+    "skill_name": "predict_payment_reminders",
+    "user_name": "王小美",
+    "session_id": "mobile_1781510960704",
+    "invoked_at": "2026-06-15T10:41:18.708391+00:00",
+    "duration_ms": 27,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "您有2项已逾期待缴费：水费自动缴费、有线电视费自动缴费，合计约 ¥109。另有1项即将到期。建议尽快缴费。",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/payments/forecast",
+        "duration_ms": 20,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/payments/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "dc39e87f",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "mobile_1781520975580",
+    "invoked_at": "2026-06-15T10:56:21.336344+00:00",
+    "duration_ms": 17,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f89dc7cf",
+    "skill_name": "financial_planning",
+    "user_name": "王小美",
+    "session_id": "mobile_1781520975580",
+    "invoked_at": "2026-06-15T11:00:57.411348+00:00",
+    "duration_ms": 42,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：2个账户、0个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 12,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 9,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e3989434",
+    "skill_name": "user_profiling",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-15T11:01:33.559702+00:00",
+    "duration_ms": 28,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：0项消费偏好、0月消费节奏、0家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "fe3192ab",
+    "skill_name": "loan_product_recommendation",
+    "user_name": "王小美",
+    "session_id": "mobile_1781535253390",
+    "invoked_at": "2026-06-15T14:54:19.753876+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户持有 1 笔贷款，建议使用贷款成本优化方案",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "7b0f9075",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "王小美",
+    "session_id": "mobile_1781535253390",
+    "invoked_at": "2026-06-15T14:54:24.534219+00:00",
+    "duration_ms": 12,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析贷款「个人一手住房贷款」优化方案：剩余本金¥486,831，年利率2.86%。提前还款建议金额¥43,791，匹配0款低息转贷产品。",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2b787e34",
+    "skill_name": "loan_product_recommendation",
+    "user_name": "王小美",
+    "session_id": "mobile_1781535272344",
+    "invoked_at": "2026-06-15T14:54:42.138049+00:00",
+    "duration_ms": 6,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户持有 1 笔贷款，建议使用贷款成本优化方案",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "06f4c2c2",
+    "skill_name": "collect_account_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1781520975580",
+    "invoked_at": "2026-06-15T15:11:46.634158+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取2个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "991323a9",
+    "skill_name": "financial_planning",
+    "user_name": "王小美",
+    "session_id": "mobile_1781536374631",
+    "invoked_at": "2026-06-15T15:12:57.556864+00:00",
+    "duration_ms": 23,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：2个账户、0个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "7b3299b3",
+    "skill_name": "history_today",
+    "user_name": "王小美",
+    "session_id": "mobile_1781536374631",
+    "invoked_at": "2026-06-15T15:14:07.430012+00:00",
+    "duration_ms": 10276,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "历史上的今天(06-15)：去年今日，一份悄然而至的心意",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "bd1c085e",
+    "skill_name": "predict_payment_reminders",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781568928031",
+    "invoked_at": "2026-06-16T00:15:31.455742+00:00",
+    "duration_ms": 17,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前没有预测到的待缴费任务",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/payments/forecast",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/payments/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d2a2aa29",
+    "skill_name": "life_recommendation",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781568928031",
+    "invoked_at": "2026-06-16T00:16:35.936928+00:00",
+    "duration_ms": 27,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已构建消费画像（2个标签），匹配8款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "484b4ddc",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-16T00:35:06.106257+00:00",
+    "duration_ms": 0,
+    "success": false,
+    "error_message": "'UserTag' object has no attribute 'get'",
+    "arguments": {},
+    "result_summary": "",
+    "api_traces": []
+  },
+  {
+    "id": "1826e1a3",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-16T00:37:18.184146+00:00",
+    "duration_ms": 43733,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 23 次对话 + 3 个标签，生成 4 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "a568bcfe",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-16T00:38:20.948302+00:00",
+    "duration_ms": 56012,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 13 次对话 + 6 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "9ae1b8a7",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-16T00:47:40.457589+00:00",
+    "duration_ms": 26809,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 23 次对话 + 3 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "418efebd",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-16T00:47:56.321145+00:00",
+    "duration_ms": 20580,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 13 次对话 + 6 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "706430fc",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-16T00:54:22.936306+00:00",
+    "duration_ms": 22414,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 23 次对话 + 3 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "377f9556",
+    "skill_name": "predict_payment_reminders",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781571941886",
+    "invoked_at": "2026-06-16T01:05:44.230735+00:00",
+    "duration_ms": 12,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前没有预测到的待缴费任务",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/payments/forecast",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/payments/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "18c71307",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-16T01:38:49.171862+00:00",
+    "duration_ms": 35566,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 22 次对话 + 3 个标签，生成 4 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "38282830",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "王小美",
+    "session_id": "",
+    "invoked_at": "2026-06-16T01:41:20.413791+00:00",
+    "duration_ms": 44418,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 22 次对话 + 3 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "5e7a2294",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781577209912",
+    "invoked_at": "2026-06-16T02:33:32.998306+00:00",
+    "duration_ms": 23,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 11,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "4303a3a1",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781588330470",
+    "invoked_at": "2026-06-16T05:38:54.123858+00:00",
+    "duration_ms": 40,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 13,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 9,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f42b1237",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781588410696",
+    "invoked_at": "2026-06-16T05:40:17.016666+00:00",
+    "duration_ms": 21,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "5be1eeae",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781588330470",
+    "invoked_at": "2026-06-16T15:32:06.907347+00:00",
+    "duration_ms": 25,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2b562281",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781624452962",
+    "invoked_at": "2026-06-16T15:40:56.911452+00:00",
+    "duration_ms": 32,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "9f8d79d0",
+    "skill_name": "life_recommendation",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781624452962",
+    "invoked_at": "2026-06-16T15:43:36.917362+00:00",
+    "duration_ms": 40,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已构建消费画像（2个标签），匹配8款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 10,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 13,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2924ee7a",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781624452962",
+    "invoked_at": "2026-06-16T15:45:29.928306+00:00",
+    "duration_ms": 100,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、380个线下商户、1457笔信用卡交易+1084笔记账交易，共380个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 38,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 24,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "7a65f06d",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781624452962",
+    "invoked_at": "2026-06-16T15:47:46.511197+00:00",
+    "duration_ms": 19,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户暂无持有贷款，无需优化",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 9,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "90732a39",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781588330470",
+    "invoked_at": "2026-06-17T00:47:17.867241+00:00",
+    "duration_ms": 25,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 17,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "8dc5ca39",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781662106906",
+    "invoked_at": "2026-06-17T02:08:33.089351+00:00",
+    "duration_ms": 19,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 15,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "32df428e",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781662106906",
+    "invoked_at": "2026-06-17T02:09:06.282708+00:00",
+    "duration_ms": 21,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f22a342e",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781662106906",
+    "invoked_at": "2026-06-17T02:11:45.566142+00:00",
+    "duration_ms": 8,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户暂无持有贷款，无需优化",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "84c6d655",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781662106906",
+    "invoked_at": "2026-06-17T02:12:42.135780+00:00",
+    "duration_ms": 29,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 7,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "4dfd4509",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781662106906",
+    "invoked_at": "2026-06-17T02:14:57.811028+00:00",
+    "duration_ms": 552,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 31,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "3d6ced46",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-17T02:20:55.978371+00:00",
+    "duration_ms": 28,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "16754e25",
+    "skill_name": "consumption_analysis",
+    "user_name": "王小美",
+    "session_id": "mobile_1781663542881",
+    "invoked_at": "2026-06-17T02:32:27.460676+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥43,791.30，月均消费¥0.00，不降标准可续航inf个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "61859d62",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-17T02:48:04.442995+00:00",
+    "duration_ms": 63461,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 13 次对话 + 6 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "41462613",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781682540483",
+    "invoked_at": "2026-06-17T07:49:06.038061+00:00",
+    "duration_ms": 31,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 10,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "3c0540c1",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781682540483",
+    "invoked_at": "2026-06-17T07:51:04.033777+00:00",
+    "duration_ms": 36,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 15,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "24c91844",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781682540483",
+    "invoked_at": "2026-06-17T07:58:46.735699+00:00",
+    "duration_ms": 705,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 35,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "28d2c9f3",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781682540483",
+    "invoked_at": "2026-06-22T02:30:18.947860+00:00",
+    "duration_ms": 41,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 9,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 14,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "567747d9",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-22T02:31:38.163559+00:00",
+    "duration_ms": 17,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "62ae9ab8",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1781682540483",
+    "invoked_at": "2026-06-22T02:54:20.608525+00:00",
+    "duration_ms": 19,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "3c41cfd3",
+    "skill_name": "marketing_lead_analyzer",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-22T06:06:29.516283+00:00",
+    "duration_ms": 52947,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "基于近一周 7 次对话 + 6 个标签，生成 5 条营销线索",
+    "api_traces": []
+  },
+  {
+    "id": "3714e571",
+    "skill_name": "user_profiling",
+    "user_name": "彭楫洲",
+    "session_id": "",
+    "invoked_at": "2026-06-22T06:06:34.727713+00:00",
+    "duration_ms": 20,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集全维度画像数据：12项消费偏好、12月消费节奏、15家常去商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "17adeb77",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782266494823",
+    "invoked_at": "2026-06-24T02:01:45.705541+00:00",
+    "duration_ms": 21,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cb81f7a0",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782318772749",
+    "invoked_at": "2026-06-24T16:33:08.294443+00:00",
+    "duration_ms": 6,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f716d51a",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782318772749",
+    "invoked_at": "2026-06-24T16:33:08.300072+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2729254f",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782318772749",
+    "invoked_at": "2026-06-24T16:33:14.060278+00:00",
+    "duration_ms": 14,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "72c43276",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782637783815",
+    "invoked_at": "2026-06-28T09:09:54.993427+00:00",
+    "duration_ms": 41,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 9,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "fed2f046",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782951144916",
+    "invoked_at": "2026-07-02T00:12:38.074039+00:00",
+    "duration_ms": 9,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "21682296",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782951144916",
+    "invoked_at": "2026-07-02T00:12:38.084832+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cfcf3ade",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782951144916",
+    "invoked_at": "2026-07-02T00:12:38.544459+00:00",
+    "duration_ms": 9,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "490908c9",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782951144916",
+    "invoked_at": "2026-07-02T00:12:38.565811+00:00",
+    "duration_ms": 471,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cc8afd21",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782951144916",
+    "invoked_at": "2026-07-02T00:12:38.584339+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "64f3bc0b",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782951144916",
+    "invoked_at": "2026-07-02T00:14:19.075798+00:00",
+    "duration_ms": 39,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 23,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "6bfa080e",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782952244030",
+    "invoked_at": "2026-07-02T00:30:51.169272+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "8ed1aa64",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782952244030",
+    "invoked_at": "2026-07-02T00:30:51.181857+00:00",
+    "duration_ms": 12,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 9,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d0e4559e",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782952244030",
+    "invoked_at": "2026-07-02T00:30:51.656616+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "4066fd76",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782952244030",
+    "invoked_at": "2026-07-02T00:30:51.671274+00:00",
+    "duration_ms": 478,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "1caada62",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782952244030",
+    "invoked_at": "2026-07-02T00:30:51.722337+00:00",
+    "duration_ms": 43,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 27,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "c59ef0b8",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782952244030",
+    "invoked_at": "2026-07-02T00:33:22.929175+00:00",
+    "duration_ms": 34,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 18,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "98578ec0",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782958566206",
+    "invoked_at": "2026-07-02T02:16:15.841133+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e2a85d2d",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782973959645",
+    "invoked_at": "2026-07-02T06:32:49.919395+00:00",
+    "duration_ms": 20,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "ef402075",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782973959645",
+    "invoked_at": "2026-07-02T06:32:50.382977+00:00",
+    "duration_ms": 24,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 19,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "673c6670",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782973959645",
+    "invoked_at": "2026-07-02T06:32:50.400047+00:00",
+    "duration_ms": 468,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "8856ef75",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993022684",
+    "invoked_at": "2026-07-02T11:50:35.072238+00:00",
+    "duration_ms": 23,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 19,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "c1ca2364",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:05.938813+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "ef583327",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:05.953514+00:00",
+    "duration_ms": 26,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 23,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "45b851e0",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:08.648598+00:00",
+    "duration_ms": 24,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 20,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a61e6392",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:08.656070+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "796babc0",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:11.520492+00:00",
+    "duration_ms": 22,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 18,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a90e07db",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:41.428391+00:00",
+    "duration_ms": 457,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 14,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "c9cb9ae0",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:41.472169+00:00",
+    "duration_ms": 48,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 34,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2046c8f9",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:06:41.487672+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "8d2bd374",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:09:46.033267+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "2ea4db86",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:18:36.782379+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "82309b3a",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:18:36.794485+00:00",
+    "duration_ms": 13,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 10,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a0f80936",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:18:40.000595+00:00",
+    "duration_ms": 8,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f14fbb21",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1782993956912",
+    "invoked_at": "2026-07-02T12:23:23.023657+00:00",
+    "duration_ms": 37,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 22,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "dcf7880d",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043576611",
+    "invoked_at": "2026-07-03T01:53:11.899558+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "5f624e10",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T01:57:27.969467+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cc42d680",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T01:57:28.505279+00:00",
+    "duration_ms": 13,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 9,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "11acb503",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T01:57:28.533414+00:00",
+    "duration_ms": 551,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 16,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d006f78f",
+    "skill_name": "consumption_analysis",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T01:57:28.550549+00:00",
+    "duration_ms": 19,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "当前可用资金¥60,426.53，月均消费¥13,183.21，不降标准可续航4.6个月",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a56e8ab3",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T01:58:36.435949+00:00",
+    "duration_ms": 40,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 26,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cdacacac",
+    "skill_name": "neighborhood_profiler",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T02:00:35.223864+00:00",
+    "duration_ms": 99,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析生活圈数据：2个开户行、380个线下商户、1457笔信用卡交易+1084笔记账交易，共380个独立线下商户",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 35,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 33,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "1583273f",
+    "skill_name": "loan_cost_optimizer",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783043833167",
+    "invoked_at": "2026-07-03T02:02:59.295078+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "用户暂无持有贷款，无需优化",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/held-products/loans",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "e8e85d98",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783044323593",
+    "invoked_at": "2026-07-03T02:05:34.408816+00:00",
+    "duration_ms": 11,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "44835202",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783044323593",
+    "invoked_at": "2026-07-03T02:05:34.417349+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "d36b5f00",
+    "skill_name": "income_forecast",
+    "user_name": "王小美",
+    "session_id": "mobile_1783044323593",
+    "invoked_at": "2026-07-03T02:06:10.141043+00:00",
+    "duration_ms": 469,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析5个月收支数据；识别2类收入来源（已剔除14笔个人转入）；3类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 5,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cfe54dde",
+    "skill_name": "collect_account_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783046720468",
+    "invoked_at": "2026-07-03T02:45:29.102026+00:00",
+    "duration_ms": 21,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取2个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "46ecd403",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783046720468",
+    "invoked_at": "2026-07-03T02:45:29.112927+00:00",
+    "duration_ms": 12,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "f3e387ae",
+    "skill_name": "collect_transaction_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783046720468",
+    "invoked_at": "2026-07-03T02:45:29.120379+00:00",
+    "duration_ms": 10,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共37条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 5,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "6fdfa238",
+    "skill_name": "collect_transaction_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783046720468",
+    "invoked_at": "2026-07-03T02:46:07.866742+00:00",
+    "duration_ms": 20,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共37条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "6f1f2579",
+    "skill_name": "collect_consumption_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783046720468",
+    "invoked_at": "2026-07-03T02:46:07.875491+00:00",
+    "duration_ms": 13,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取0条消费统计（subcategory维度），合计¥0.00",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "299e2f3f",
+    "skill_name": "collect_account_data",
+    "user_name": "王小美",
+    "session_id": "mobile_1783046827537",
+    "invoked_at": "2026-07-03T02:47:22.289350+00:00",
+    "duration_ms": 7,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取2个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "175082cb",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783072130322",
+    "invoked_at": "2026-07-03T09:48:59.470900+00:00",
+    "duration_ms": 22,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 12,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "04008037",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783072130322",
+    "invoked_at": "2026-07-03T09:48:59.481244+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "866d7ef1",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783072130322",
+    "invoked_at": "2026-07-03T09:50:00.307827+00:00",
+    "duration_ms": 16,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "648f8ed8",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783072130322",
+    "invoked_at": "2026-07-03T09:50:00.320817+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "89d270b4",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783072130322",
+    "invoked_at": "2026-07-03T09:50:00.356473+00:00",
+    "duration_ms": 39,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 24,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "fe7ecd74",
+    "skill_name": "expense_pattern_detector",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783072130322",
+    "invoked_at": "2026-07-03T09:52:03.447420+00:00",
+    "duration_ms": 51,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "检测到7个疑似订阅、10个重复商户、10笔异常支出",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 22,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "743b7fcd",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783076777131",
+    "invoked_at": "2026-07-03T11:06:21.720635+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "fe918d42",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783076777131",
+    "invoked_at": "2026-07-03T11:06:21.733209+00:00",
+    "duration_ms": 14,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "bb6677d0",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783076777131",
+    "invoked_at": "2026-07-03T11:06:21.743641+00:00",
+    "duration_ms": 14,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 8,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "54e91914",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:10:14.766459+00:00",
+    "duration_ms": 18,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 1,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "cb45ba33",
+    "skill_name": "collect_consumption_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:10:14.779881+00:00",
+    "duration_ms": 15,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取10条消费统计（subcategory维度），合计¥138,708.61",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "54210893",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:10:14.790067+00:00",
+    "duration_ms": 13,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 8,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "516ff477",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:11:15.096986+00:00",
+    "duration_ms": 374,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 8,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "a8ad4a0a",
+    "skill_name": "collect_transaction_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:12:56.325223+00:00",
+    "duration_ms": 23,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取20条交易记录（共2856条）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/transactions",
+        "duration_ms": 13,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "5be7af74",
+    "skill_name": "collect_account_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:12:56.334849+00:00",
+    "duration_ms": 13,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取4个账户信息，总资产¥0",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "fb903066",
+    "skill_name": "income_forecast",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783077004167",
+    "invoked_at": "2026-07-03T11:13:00.703685+00:00",
+    "duration_ms": 347,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已分析36个月收支数据；识别10类收入来源（已剔除21笔个人转入）；10类支出方向；预测未来2年收支趋势",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 1,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "bc96ab07",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783643532446",
+    "invoked_at": "2026-07-10T00:32:19.580385+00:00",
+    "duration_ms": 154,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 10,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 11,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 6,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 60,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 48,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 3,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "07b4f546",
+    "skill_name": "knowledge_search",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783643532446",
+    "invoked_at": "2026-07-10T00:34:45.587739+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "知识搜索失败：缺少查询内容",
+    "api_traces": []
+  },
+  {
+    "id": "0e55b680",
+    "skill_name": "knowledge_search",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783643532446",
+    "invoked_at": "2026-07-10T00:34:49.329563+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "知识搜索失败：缺少查询内容",
+    "api_traces": []
+  },
+  {
+    "id": "085b8d3f",
+    "skill_name": "knowledge_search",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783643532446",
+    "invoked_at": "2026-07-10T00:34:53.099701+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "知识搜索失败：缺少查询内容",
+    "api_traces": []
+  }
+]

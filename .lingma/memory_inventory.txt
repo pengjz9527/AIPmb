@@ -1,0 +1,261 @@
+[common_pitfalls_experience] ADB命令需使用全路径调用
+[common_pitfalls_experience] AGP 9+ DSL兼容性与jcenter废弃问题
+[common_pitfalls_experience] AGP 构建失败因 JDK 版本不匹配
+[common_pitfalls_experience] AGP与Gradle版本兼容性要求
+[common_pitfalls_experience] AgentRegistry.list_agents()返回对象不可下标访问
+[common_pitfalls_experience] Android模拟器不支持speech_to_text语音识别
+[common_pitfalls_experience] Android模拟器冷启动与ADB就绪状态处理
+[common_pitfalls_experience] Android模拟器启动需先查询可用AVD名
+[common_pitfalls_experience] Android模拟器在无GUI环境需强制使用-no-window参数
+[common_pitfalls_experience] Android模拟器访问宿主机需用10.0.2.2而非localhost
+[common_pitfalls_experience] Android模拟器连接宿主机服务失败的首要排查点
+[common_pitfalls_experience] Bash here-document 构建 JSON 易因中文引号失效
+[common_pitfalls_experience] BorderRadiusGeometry 不再支持 topLeft 子属性
+[common_pitfalls_experience] ChromaDB插入需确保ID全局唯一，同名文件须加路径前缀
+[common_pitfalls_experience] CupertinoPageTransitionsBuilder 仅限 iOS 使用
+[common_pitfalls_experience] DPRO CLI命令需使用绝对路径调用
+[common_pitfalls_experience] DPRO bl工具钉钉会话失效需重新登录
+[common_pitfalls_experience] Dart List<dynamic> 类型转换陷阱
+[common_pitfalls_experience] DashScope API Key必须来自官方控制台且完整有效
+[common_pitfalls_experience] Excel年月列解析需容错处理
+[common_pitfalls_experience] FastAPI模块路径需与文件结构一致
+[common_pitfalls_experience] Flutter SDK路径需动态查找而非硬编码
+[common_pitfalls_experience] Flutter Web SSE 必须使用 EventSource 而非 Dio Stream
+[common_pitfalls_experience] Flutter web-server端口冲突需同时清理dart进程
+[common_pitfalls_experience] Flutter web端口被占用时的处理方法
+[common_pitfalls_experience] Flutter枚举构造函数需加const修饰
+[common_pitfalls_experience] Flutter热重载在模拟器中不可用/proc/pid/fd/0写入
+[common_pitfalls_experience] GoRouter queryParameters已自动解码，禁止二次解码
+[common_pitfalls_experience] Gradle 9.1+ 需 JDK 17+，否则构建失败
+[common_pitfalls_experience] Gradle 9.x 构建需JDK 17+
+[common_pitfalls_experience] GridView shrinkWrap下childAspectRatio失效
+[common_pitfalls_experience] HTTP Header中文传输需编码解码
+[common_pitfalls_experience] Homebrew Python需加--break-system-packages安装包
+[common_pitfalls_experience] Kimi k2.5 assistant消息需携带reasoning_content
+[common_pitfalls_experience] Kimi k2.5不支持image_url消息类型
+[common_pitfalls_experience] Kimi推理模型tool call需保留reasoning_content
+[common_pitfalls_experience] LLM messages字段仅支持text，不支持image_url
+[common_pitfalls_experience] LLM模型图片能力识别与自动降级
+[common_pitfalls_experience] LoanCostOptimizerSkill中_analyze_refinance缺少api参数
+[common_pitfalls_experience] NDK下载不完整导致CXX1101错误
+[common_pitfalls_experience] OpenAI兼容接口禁用image_url字段
+[common_pitfalls_experience] Python沙箱网络隔离导致HTTP连接失败
+[common_pitfalls_experience] Python需使用虚拟环境路径执行
+[common_pitfalls_experience] Qoder预览浏览器禁止跨端口XHR请求
+[common_pitfalls_experience] Read工具不支持非文本文件
+[common_pitfalls_experience] Riverpod provider引用需与import同步清理
+[common_pitfalls_experience] SearchReplace需基于最新文件内容构造original_text
+[common_pitfalls_experience] Starlette Mount中间件需手动剥离挂载前缀
+[common_pitfalls_experience] adb am start启动Activity失败的排查方法
+[common_pitfalls_experience] adb monkey启动APP需匹配applicationId
+[common_pitfalls_experience] adb 命令需用绝对路径或配置 PATH
+[common_pitfalls_experience] adb命令不可用因platform-tools未加入PATH
+[common_pitfalls_experience] adb命令需预先安装Android SDK Platform-Tools
+[common_pitfalls_experience] adb安装APK需手动确认手机权限弹窗
+[common_pitfalls_experience] async协程中调用同步I/O需用asyncio.to_thread卸载
+[common_pitfalls_experience] avdmanager在Apple Silicon上路径解析失败需手动创建AVD
+[common_pitfalls_experience] belink orders命令已弃用，应使用wb my orders
+[common_pitfalls_experience] belink presales-report 接口需 insertPreSalesViewParameter 包装及 clueId/clueMasterId 字段
+[common_pitfalls_experience] belink wb call 接口调用需先确认模块注册
+[common_pitfalls_experience] belink审批查询需使用queryTaskApprovalRecordList接口
+[common_pitfalls_experience] emulator命令需使用绝对路径调用
+[common_pitfalls_experience] esbuild平台不匹配需重装node_modules
+[common_pitfalls_experience] grep在管道中无匹配时exit code为1是正常行为
+[common_pitfalls_experience] macOS date命令不支持-v后直接拼接负号算术扩展
+[common_pitfalls_experience] macOS上simctl和Simulator不可用的前置条件
+[common_pitfalls_experience] macOS中timeout命令不可用
+[common_pitfalls_experience] macOS中替代timeout命令的方法
+[common_pitfalls_experience] macOS强制释放端口命令
+[common_pitfalls_experience] numpy数组禁止直接bool判断，需显式检查None和长度
+[common_pitfalls_experience] nvm环境下npm命令需手动添加PATH
+[common_pitfalls_experience] openpyxl读取非首行表头的正确方式
+[common_pitfalls_experience] queryCommonBusApprovalByCondition 接口不可用
+[common_pitfalls_experience] sdkmanager强制要求JDK 17+且需显式设置JAVA_HOME
+[common_pitfalls_experience] uvicorn需使用venv中Python执行
+[common_pitfalls_experience] 审批列表接口不可用：queryCommonBusApprovalByCondition
+[common_pitfalls_experience] 异步方法链中API客户端需显式传参
+[common_pitfalls_experience] 模型配置详情接口缺失
+[common_pitfalls_experience] 模拟器无法被ADB识别的排查与解决
+[common_pitfalls_experience] 沙箱中venv Python路径需用真实路径+显式环境变量
+[common_pitfalls_experience] 百炼text-embedding-v3 batch size上限为10
+[common_pitfalls_experience] 获取当前用户名应优先调用whoami.current_staff()
+[common_pitfalls_experience] 钉钉看板视图添加记录的自动化限制
+[development_code_specification] AI推荐卡片UI布局规范
+[development_code_specification] AI推荐卡片文字折行规范
+[development_code_specification] Flutter FAB文字对比度规范
+[development_code_specification] 快捷数据卡片等高规范
+[development_code_specification] 线索分析按钮UI样式规范
+[development_code_specification] 资产卡片尺寸放大规范
+[development_practice_specification] AI对话人称一致性规范
+[development_practice_specification] AI对话渲染与Skill编排实践规范
+[development_practice_specification] AI调用思考过程展示原则
+[development_practice_specification] Dart字符串转double的防御性编程规范
+[development_practice_specification] FastAPI路由顺序与LLM JSON解析规范
+[development_practice_specification] Flutter Web SSE 实现规范
+[development_practice_specification] Skill后端调用方式规范
+[development_practice_specification] Skill日志记录异步化规范
+[development_practice_specification] skill调用强制走FAST API的实践规范
+[development_practice_specification] 收入分析中个人转账资金处理规范
+[development_practice_specification] 缴费预测算法规范
+[history_task_reference_files] 用户持有产品模块相关文件
+[important_decision_experience] AI助手命名与响应结构规范
+[important_decision_experience] AI对话内容移动端展示优化决策
+[important_decision_experience] AI建议卡片交互决策-简洁标签+展开式+直触触发
+[important_decision_experience] AI调用思考过程展示原则
+[important_decision_experience] Flutter APP演示方式决策-优先编译Web版
+[important_decision_experience] Flutter禁用弹簧滚动效果决策
+[important_decision_experience] Skill新建时存储位置与标签策略决策
+[important_decision_experience] UI改造采用短期最优方案决策
+[important_decision_experience] 主动预测能力应采用规则引擎+LLM增强方案
+[important_decision_experience] 分析类智能体渐进式交互设计决策
+[important_decision_experience] 前端开发中启用完全Mock模式决策
+[important_decision_experience] 垂直领域智能体应采用独立Agent架构
+[important_decision_experience] 多轮对话建议分组回归机制
+[important_decision_experience] 审批智能化演进路径选择-L3智能规则层
+[important_decision_experience] 对话业务维度分类与数据范围决策
+[important_decision_experience] 顶层返回建议命名：看看其他分析主题
+[project_build_configuration] PPT生成工具与布局规范
+[project_build_configuration] Python项目构建与命令入口配置
+[project_build_configuration] chromadb构建依赖
+[project_build_configuration] setuptools构建与包配置
+[project_dependency_configuration] pyproject.toml依赖声明配置
+[project_dependency_configuration] sentence-transformers依赖版本配置
+[project_dependency_configuration] 百炼API密钥依赖配置
+[project_dependency_configuration] 百炼text-embedding-v3 API密钥
+[project_environment_configuration] ADB端口转发与API地址配置
+[project_environment_configuration] AI-Manage运营管理后台访问地址
+[project_environment_configuration] AI-manage与Pmb同端口同源部署
+[project_environment_configuration] AIPmb PPT布局规范
+[project_environment_configuration] Android真机安装与本地服务端联调方案
+[project_environment_configuration] Android真机部署与本地服务端联调方案
+[project_environment_configuration] Coding Plan API Key运行约束
+[project_environment_configuration] Flutter全局滚动物理效果配置
+[project_environment_configuration] Kimi k2.5 新API Key配置
+[project_environment_configuration] LLM API Key 配置
+[project_environment_configuration] Mock模式配置
+[project_environment_configuration] PPT公司图标配置
+[project_environment_configuration] Python虚拟环境路径配置
+[project_environment_configuration] Python运行环境与隐含依赖
+[project_environment_configuration] RAG运行环境配置
+[project_environment_configuration] 产品详情页信息卡片高度配置
+[project_environment_configuration] 前端滚动物理效果配置
+[project_environment_configuration] 售前周报文件存储路径
+[project_environment_configuration] 售前日期默认规则
+[project_environment_configuration] 服务端局域网IP地址
+[project_environment_configuration] 本地开发环境启动全流程
+[project_environment_configuration] 本地开发环境配置
+[project_environment_configuration] 本地服务端局域网IP地址
+[project_environment_configuration] 运营后台访问地址与部署方式
+[project_ide_configuration] PPT宽屏一屏显示规范
+[project_ide_configuration] PPT白色科技流主题
+[project_introduction] AIPmb-manage用户数据隔离要求
+[project_introduction] AIPmb-manage纪念日历页面交互修复
+[project_introduction] AIPmb-manage运营管理后台
+[project_introduction] AIPmb-manage运营管理后台部署与启动规范
+[project_introduction] AIPmb客户端用户切换缓存隔离缺陷
+[project_introduction] AIPmb智能体连续对话能力
+[project_introduction] AIPmb用户数据隔离端到端业务验证结果
+[project_introduction] AIPmb用户数据隔离能力
+[project_introduction] AIPmb用户登录功能设计
+[project_introduction] AIPmb项目Skill功能架构
+[project_introduction] AIPmb项目Skill功能架构（支持用户数据隔离）
+[project_introduction] AIPmb项目全景画像
+[project_introduction] AI助手名称UI更新
+[project_introduction] AI匹配产品功能需求
+[project_introduction] AI对话输出体验优化规范
+[project_introduction] AI手机银行APP核心功能与架构
+[project_introduction] AI服务资产卡片新增与归类规则
+[project_introduction] AI服务页面卡片UI规范
+[project_introduction] AI生成日历功能实现与修复详情
+[project_introduction] AI生成日历进度展示功能
+[project_introduction] AI运营功能动态更新机制
+[project_introduction] AI运营对话记录查询功能
+[project_introduction] APP三主题动态切换功能
+[project_introduction] APP服务器地址动态配置需求
+[project_introduction] APP账户卡片快捷交易按钮功能规范
+[project_introduction] DPRO售前信息周报查询逻辑
+[project_introduction] DPRO售前信息检索提交人过滤规则
+[project_introduction] Flutter前端短期视觉升级方案
+[project_introduction] PMB项目功能定位与能力概述
+[project_introduction] PurchasePage基本信息网格溢出问题
+[project_introduction] RAG产品知识库核心功能
+[project_introduction] RAG知识文档目录结构
+[project_introduction] aipmb_manage对话运营模块功能需求
+[project_introduction] pmb银行个人业务CLI项目概述
+[project_introduction] presales-weekly技能新增Word导出功能
+[project_introduction] presales-weekly技能输出格式规范
+[project_introduction] 中风险商机表字段映射规则
+[project_introduction] 中风险商机表字段映射规则（更新版）
+[project_introduction] 为你推荐卡片点击跳转功能
+[project_introduction] 人生画像详情分析交互设计
+[project_introduction] 企业综合服务平台MVP整体架构与功能概览
+[project_introduction] 信用卡账单消费细分子类设计
+[project_introduction] 历史上的今天功能需求
+[project_introduction] 周期性订阅消费检测范围优化
+[project_introduction] 售前信息录入新增背景与痛点收集步骤
+[project_introduction] 售前周报时间范围定义
+[project_introduction] 多智能体Skill化重构需求
+[project_introduction] 审批功能类型及6月运行现状
+[project_introduction] 手机银行用户登录功能设计
+[project_introduction] 技能监控模块查询条件优化需求
+[project_introduction] 报销管理GUI审批流入口
+[project_introduction] 持有产品模块用户数据隔离缺陷
+[project_introduction] 收支分析智能体分层交互规范
+[project_introduction] 收支分析智能体多轮建议完整性设计缺陷与修复
+[project_introduction] 收支分析智能体建议条目失效问题
+[project_introduction] 收支分析智能体核心功能需求
+[project_introduction] 收支分析能力统一收敛至Agent
+[project_introduction] 数据源范围限定
+[project_introduction] 本周售前信息提报汇总Skill
+[project_introduction] 模型配置模块核心问题与修复方案
+[project_introduction] 此刻页面AI助手名称
+[project_introduction] 此刻页面AI标签浮层交互
+[project_introduction] 此刻频道纪念日历引导与缓存功能
+[project_introduction] 添加线索到中风险商机管理表技能
+[project_introduction] 理财推荐产品合规与交互规范
+[project_introduction] 理财推荐产品约束与交互规范（增强版）
+[project_introduction] 理财推荐功能交互链路需求
+[project_introduction] 理财推荐功能产品约束与交互规范
+[project_introduction] 理财方案输出格式规范
+[project_introduction] 用户性格画像功能规范
+[project_introduction] 用户投资风险等级评估功能需求
+[project_introduction] 用户持有产品信息模块需求
+[project_introduction] 用户级长期对话记忆能力
+[project_introduction] 用户级长期对话记忆能力（基于手机号标识）
+[project_introduction] 用户纪念日历功能需求
+[project_introduction] 用户详情页线索分析功能需求
+[project_introduction] 用户账户结构差异化设计
+[project_introduction] 缴费记录分析与待办提醒新需求
+[project_introduction] 缴费记录分析与提醒核心能力
+[project_introduction] 贷款产品推荐Skill功能需求
+[project_introduction] 贷款成本优化方案Skill功能需求
+[project_introduction] 运营管理后台技能监控模块功能需求
+[project_introduction] 银行交易流水数据源更新
+[project_introduction] 隐秘习惯探索Skill功能定义
+[project_introduction] 隐秘习惯探索技能增强需求
+[project_introduction] 青岛银行手机银行平台转型核心规划
+[project_introduction] 项目数据源命名规范更新
+[project_tech_stack] AIPmb全栈技术栈
+[project_tech_stack] Embedding技术栈切换为本地模型
+[project_tech_stack] Python CLI服务技术栈
+[project_tech_stack] Python银行CLI服务技术栈
+[project_tech_stack] RAG技术选型
+[project_tech_stack] 全栈技术选型明细
+[project_tech_stack] 前端技术栈更新为猎豹移动平台
+[project_tech_stack] 模型服务端消息类型限制
+[project_tech_stack] 猎豹移动平台跨端方案
+[project_tech_stack] 百炼Coding Plan服务接入配置
+[project_tech_stack] 项目技术栈
+[project_tech_stack] 项目技术栈：FastAPI + Flutter
+[project_tech_stack] 项目未采用MCP服务
+[projects] 
+[projects] 
+[projects] 
+[task_summary_experience] AI-Manage全栈服务状态诊断流程
+[task_summary_experience] Task 9行业数据初始化方案重构
+[task_summary_experience] 修复数据经营中心看板页面顶层await渲染失败
+[task_summary_experience] 前端空白页修复与用户持有产品模块交付
+[task_summary_experience] 客户经理Web端登录Mock策略统一修复
+[task_summary_experience] 新增用户持有产品模块
+[task_summary_experience] 用户持有产品模块全栈实现
+[task_summary_experience] 用户持有产品模块实现

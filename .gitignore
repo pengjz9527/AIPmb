@@ -1,0 +1,46 @@
+# IDE
+.qoder/
+.qoder.archived/
+.qoder.backup.*/
+.idea/
+
+# Qoder CN - keep skills, ignore personal rules
+.lingma/rules/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+*.local
+
+# Output & Uploads
+output/
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Flutter
+aipmb_app/.dart_tool/
+aipmb_app/build/
+aipmb_app/android/.gradle/
+aipmb_app/android/app/build/
+aipmb_app/android/build/
+aipmb_app/ios/Pods/
+aipmb_app/ios/.symlinks/
+aipmb_app/.flutter-plugins
+aipmb_app/.flutter-plugins-dependencies
+
+aipmb_manage/.dart_tool/
+aipmb_manage/build/
+aipmb_manage/.flutter-plugins-dependencies
+
+# ChromaDB
+pmb/rag/chroma_db/

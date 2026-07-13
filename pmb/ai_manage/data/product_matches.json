@@ -1,0 +1,147 @@
+{
+  "王小美": {
+    "user_name": "王小美",
+    "tags_used": [
+      "资产静置达人",
+      "0消费记录保持者",
+      "双账户守护神"
+    ],
+    "has_risk_assessment": false,
+    "risk_level": null,
+    "risk_warning": "⚠️ 该用户尚未完成风险等级评估。以下推荐产品仅供参考内部使用，请在用户完成风评后重新匹配。",
+    "matched_products": [
+      {
+        "product_name": "整存整取",
+        "bank": "招商银行",
+        "category": "存款产品",
+        "type_label": "储蓄存款",
+        "description": "一次性存入本金，约定存期，到期一次性支取本息",
+        "risk_level": "",
+        "match_score": 0.95,
+        "match_reason": "结合「资产静置达人」标签，您偏好资金长期不动，整存整取一次性存入、约定存期、到期支取，完美匹配您的资产静置习惯；同时「0消费记录保持者」表明您无需频繁支取资金，「双账户守护神」也适合在不同账户配置此种锁定收益的存款。",
+        "detail_link": "/recommendations?product=整存整取"
+      },
+      {
+        "product_name": "大额存单",
+        "bank": "招商银行",
+        "category": "存款产品",
+        "type_label": "大额存单",
+        "description": "银行面向个人客户发行的记账式大额存款凭证，利率高于同期定期存款",
+        "risk_level": "",
+        "match_score": 0.9,
+        "match_reason": "作为「资产静置达人」，您可能持有较大额闲置资金，招商银行大额存单利率高于普通定期，能有效提升静置资产回报；「0消费记录」进一步印证您无短期支出需求，适合长期锁息。",
+        "detail_link": "/recommendations?product=大额存单"
+      },
+      {
+        "product_name": "储蓄国债(电子式)",
+        "bank": "招商银行",
+        "category": "理财产品",
+        "type_label": "国债",
+        "description": "以电子方式记录的储蓄国债，可通过网银购买",
+        "risk_level": "一级(低风险)",
+        "match_score": 0.85,
+        "match_reason": "「双账户守护神」追求极致安全，国债以国家信用为担保，风险一级，正是为资产静置而设计；「0消费记录」者无需流动性，国债长期持有免收利息税，完美契合您零消费、只存不取的特质。",
+        "detail_link": "/recommendations?product=储蓄国债(电子式)"
+      },
+      {
+        "product_name": "存本取息",
+        "bank": "招商银行",
+        "category": "存款产品",
+        "type_label": "储蓄存款",
+        "description": "一次性存入本金，分次支取利息，到期支取本金",
+        "risk_level": "",
+        "match_score": 0.8,
+        "match_reason": "「双账户守护神」善于管理多个账户，存本取息让本金保持静置，利息分期支取，便于在不同账户间分配收益；「资产静置达人」的本金始终不动，而「0消费记录」意味着利息也可继续累积，实现纯储蓄循环。",
+        "detail_link": "/recommendations?product=存本取息"
+      },
+      {
+        "product_name": "个人大额存单",
+        "bank": "汉口银行",
+        "category": "存款产品",
+        "type_label": "大额存单",
+        "description": "面向个人客户发行的记账式大额存款凭证，利率较同期限定期存款更有竞争力",
+        "risk_level": "",
+        "match_score": 0.75,
+        "match_reason": "作为「双账户守护神」，您在汉口银行可能也保有账户，该行个人大额存单利率有竞争力，可进一步分散静置资产；同时坚守「0消费记录」和资产不动原则，此类存款完全贴合您的储蓄哲学。",
+        "detail_link": "/recommendations?product=个人大额存单"
+      }
+    ],
+    "total_matched": 5,
+    "model_used": "deepseek-v4-pro",
+    "generated_at": "2026-06-17 15:45:58"
+  },
+  "彭楫洲": {
+    "user_name": "彭楫洲",
+    "tags_used": [
+      "高铁通勤VIP",
+      "数码生态建设者",
+      "知识付费狠人",
+      "车轮上的品质生活家",
+      "月度消费过山车玩家",
+      "三餐外卖艺术家"
+    ],
+    "has_risk_assessment": false,
+    "risk_level": null,
+    "risk_warning": "⚠️ 该用户尚未完成风险等级评估。以下推荐产品仅供参考内部使用，请在用户完成风评后重新匹配。",
+    "matched_products": [
+      {
+        "product_name": "闪电贷",
+        "bank": "招商银行",
+        "category": "贷款产品",
+        "type_label": "个人网络贷款",
+        "description": "通过手机银行等线上渠道向个人客户发放的网络贷款，可用于经营或消费",
+        "risk_level": "",
+        "match_score": 0.92,
+        "match_reason": "用户作为「高铁通勤VIP」和「数码生态建设者」，追求高效全线上服务；闪电贷通过手机银行实时审批、随借随还，无缝契合其移动化、数字化的生活节奏。「月度消费过山车玩家」常面临短期资金错配，闪电贷可快速填补缺口，无需抵押，保障「车轮上的品质生活家」在汽车养护、品质出行等方面的大额灵活支出。",
+        "detail_link": "/recommendations?product=闪电贷"
+      },
+      {
+        "product_name": "现金管理类理财产品",
+        "bank": "招商银行",
+        "category": "理财产品",
+        "type_label": "固定收益-现金管理",
+        "description": "类似货币基金的银行理财产品，流动性高，风险低",
+        "risk_level": "一级(低风险)",
+        "match_score": 0.88,
+        "match_reason": "「月度消费过山车玩家」资金波动剧烈，需要高流动性工具平滑现金流；现金管理类产品支持快速赎回，收益高于活期，适合将月初闲置资金或月底回笼资金短期配置。「数码生态建设者」习惯通过手机银行打理资产，此类产品在线操作简便，与用户追求高效、聪明的资金管理方式高度吻合。",
+        "detail_link": "/recommendations?product=现金管理类理财产品"
+      },
+      {
+        "product_name": "个人循环授信",
+        "bank": "汉口银行",
+        "category": "贷款产品",
+        "type_label": "个人授信贷款",
+        "description": "银行为借款人核定一定授信额度，在额度和有效期内可循环使用，随借随还",
+        "risk_level": "",
+        "match_score": 0.85,
+        "match_reason": "循环授信额度一次核定、长期有效，可随借随还，精准适配「月度消费过山车玩家」忽高忽低的消费节奏。「知识付费狠人」常有课程订阅、考证培训等持续性学习投入，循环额度能灵活支撑这类计划性非固定支出。配合线上支用功能，契合「数码生态建设者」的无纸化习惯。",
+        "detail_link": "/recommendations?product=个人循环授信"
+      },
+      {
+        "product_name": "基金定投",
+        "bank": "招商银行",
+        "category": "基金产品",
+        "type_label": "",
+        "description": "定期定额投资基金，自动扣款，积少成多",
+        "risk_level": "视所选基金而定",
+        "match_score": 0.78,
+        "match_reason": "「知识付费狠人」认可长期主义与复利思维，基金定投的纪律性投入与该特质高度共鸣。通过定期定额投资，可帮助「月度消费过山车玩家」强制平滑消费、积聚财富，逐渐建立抗波动的资产底盘。手机银行自动扣款、目标投等智能定投服务，也完全融入「数码生态建设者」的线上生活圈。",
+        "detail_link": "/recommendations?product=基金定投"
+      },
+      {
+        "product_name": "意外险",
+        "bank": "招商银行",
+        "category": "保险产品",
+        "type_label": "",
+        "description": "对因意外导致的身故、伤残提供保障的保险产品",
+        "risk_level": "",
+        "match_score": 0.72,
+        "match_reason": "「高铁通勤VIP」与「车轮上的品质生活家」均暴露在较高的交通意外风险中，意外险能提供身故、伤残保障，性价比极高。「数码生态建设者」可一键在线投保、电子保单管理，与无纸化、智能化的生活态度一致。虽然三餐外卖不直接提升意外风险，但整体快节奏生活使保障成为品质生活的重要补充。",
+        "detail_link": "/recommendations?product=意外险"
+      }
+    ],
+    "total_matched": 5,
+    "model_used": "deepseek-v4-pro",
+    "generated_at": "2026-06-22 10:33:20"
+  }
+}
