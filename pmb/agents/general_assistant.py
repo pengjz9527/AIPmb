@@ -1,7 +1,10 @@
 """通用助手智能体（小易）— 唯一入口，通过 Skill 编排 + LLM Function Calling 提供服务"""
 import json
 import asyncio
+import logging
 from pmb.agents.base import BaseAgent, AgentContext, AgentResult
+
+logger = logging.getLogger(__name__)
 
 
 class GeneralAssistantAgent(BaseAgent):
@@ -117,6 +120,17 @@ class GeneralAssistantAgent(BaseAgent):
         enhanced_prompt = self.system_prompt
         if context.memory_summary:
             enhanced_prompt += "\n" + context.memory_summary
+
+        # 注入业务规则约束（RAG 检索 + 模板组装）
+        try:
+            from pmb.llm.prompt_enhancer import PromptEnhancer
+            enhanced_prompt = PromptEnhancer.build(
+                agent_system_prompt=enhanced_prompt,
+                user_query=context.user_message,
+            )
+        except Exception as e:
+            logger.warning(f"业务规则注入失败（降级为原始 prompt）: {e}")
+
         conv.set_system_prompt(enhanced_prompt)
 
         messages = conv.get_messages()

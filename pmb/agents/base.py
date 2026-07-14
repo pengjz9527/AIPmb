@@ -100,13 +100,29 @@ class BaseAgent(ABC):
 
         return data
 
-    async def _call_llm(self, context: AgentContext, enhanced_prompt: str) -> str:
-        """调用LLM生成分析结果"""
+    async def _call_llm(
+        self,
+        context: AgentContext,
+        enhanced_prompt: str,
+        business_rules_text: str = "",
+    ) -> str:
+        """调用LLM生成分析结果
+
+        Args:
+            context: Agent上下文
+            enhanced_prompt: 增强后的用户prompt
+            business_rules_text: 业务规则约束文本（注入 system_prompt）
+        """
         from pmb.llm.qwen import QwenLLM
         from pmb.llm.context_manager import context_manager
 
         conv = context_manager.get_or_create(context.session_id)
-        conv.set_system_prompt(self.system_prompt)
+
+        # 将业务规则约束注入 system_prompt
+        enhanced_system_prompt = self.system_prompt
+        if business_rules_text:
+            enhanced_system_prompt += f"\n\n## 业务规则约束\n{business_rules_text}"
+        conv.set_system_prompt(enhanced_system_prompt)
 
         # 注入增强prompt作为用户消息
         messages = conv.get_messages()

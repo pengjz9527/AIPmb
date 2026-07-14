@@ -50,6 +50,16 @@ class FinancialPlannerAgent(BaseAgent):
                 score += 0.35
         return min(score, 1.0)
 
+    def _get_business_rules(self, user_message: str) -> str:
+        """获取匹配的业务规则约束文本（降级安全）"""
+        try:
+            from pmb.llm.prompt_enhancer import PromptEnhancer
+            retriever = PromptEnhancer._get_retriever()
+            entries = retriever.search_with_cache(user_message)
+            return retriever.format_for_prompt(entries)
+        except Exception:
+            return ""
+
     async def analyze(self, context: AgentContext) -> AgentResult:
         data = await self._collect_data(context)
 
@@ -85,7 +95,11 @@ class FinancialPlannerAgent(BaseAgent):
 
 请根据以上数据，为这位客户制定个性化的理财方案，在不降低消费品味的前提下，合理配置资金。"""
 
-        content = await self._call_llm(context, enhanced_prompt)
+        content = await self._call_llm(
+            context,
+            enhanced_prompt,
+            business_rules_text=self._get_business_rules(context.user_message),
+        )
 
         return AgentResult(
             agent_id=self.agent_id,

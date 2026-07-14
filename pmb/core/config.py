@@ -86,3 +86,20 @@ RAG_DOCS_DIR = PROJECT_ROOT / "rag_docs"
 # 向量检索默认参数
 RAG_DEFAULT_TOP_K = 5
 RAG_COLLECTION_NAME = "product_knowledge"
+
+# ========== 业务规则约束 RAG 配置 ==========
+
+# 业务规则约束文档目录
+BUSINESS_RULES_DIR = PROJECT_ROOT / "rag_docs" / "业务规则约束"
+
+# AI 对话约束规则模板
+CONSTRAINT_TEMPLATE_FILE = RAG_DOCS_DIR / "AI对话约束规则.md"
+
+# 独立 ChromaDB Collection 名称
+BUSINESS_RULES_COLLECTION = "business_rules"
+
+# 业务规则检索返回数
+RULES_TOP_K = 5
+
+# 规则检索缓存时间（秒）
+RULES_CACHE_TTL = 300
