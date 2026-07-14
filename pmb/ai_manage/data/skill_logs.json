@@ -6275,5 +6275,71 @@
     "arguments": {},
     "result_summary": "知识搜索失败：缺少查询内容",
     "api_traces": []
+  },
+  {
+    "id": "d5b52062",
+    "skill_name": "knowledge_search",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783906008235",
+    "invoked_at": "2026-07-13T01:26:51.445855+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "知识搜索失败：缺少查询内容",
+    "api_traces": []
+  },
+  {
+    "id": "1dc7f307",
+    "skill_name": "knowledge_search",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783906008235",
+    "invoked_at": "2026-07-13T01:26:54.532171+00:00",
+    "duration_ms": 0,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "知识搜索失败：缺少查询内容",
+    "api_traces": []
+  },
+  {
+    "id": "fd8d392a",
+    "skill_name": "collect_product_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783906552958",
+    "invoked_at": "2026-07-13T01:36:06.834625+00:00",
+    "duration_ms": 14,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取98款产品（类别：全部）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 7,
+        "row_count": 0
+      }
+    ]
+  },
+  {
+    "id": "c406d432",
+    "skill_name": "collect_product_data",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1783906552958",
+    "invoked_at": "2026-07-13T01:36:06.843341+00:00",
+    "duration_ms": 12,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已获取98款产品（类别：全部）",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 6,
+        "row_count": 0
+      }
+    ]
   }
 ]

@@ -182,3 +182,13 @@ class BusinessRuleIndexer:
     def get_status(self) -> dict:
         """查询索引状态"""
         return self.store.get_status()
+
+    @staticmethod
+    def is_index_ready() -> bool:
+        """判断 ChromaDB 业务规则索引是否可用"""
+        try:
+            from pmb.rag.business_rule_store import BusinessRuleStore
+            store = BusinessRuleStore()
+            return store.count > 0
+        except Exception:
+            return False

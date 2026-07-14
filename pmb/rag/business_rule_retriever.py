@@ -1,4 +1,4 @@
-"""业务规则检索器 — 关键词匹配 + TF-IDF 加权 + 格式化输出"""
+"""业务规则检索器 — 百炼 API 语义检索(主) + TF-IDF 关键词(降级) + 格式化输出"""
 import logging
 import time
 import re
@@ -22,12 +22,12 @@ class RuleEntry(NamedTuple):
 
 
 class BusinessRuleRetriever:
-    """业务规则检索器（纯关键词引擎，零外部依赖）
+    """业务规则检索器（百炼语义 + TF-IDF 混合引擎）
 
-    功能：
-    1. 解析业务规则，建立内存关键词索引
-    2. 对用户 query 做中文分词 → TF-IDF 权重 → 余弦相似度匹配
-    3. 标签关键词加权匹配
+    检索策略：
+    1. 优先调用 ChromaDB（百炼 DashScope text-embedding-v3，1024维）语义检索
+    2. 若 ChromaDB 索引为空或 API 调用失败 → 降级到 TF-IDF 关键词匹配
+    3. 标签关键词加权匹配作为补充
     4. 格式化输出为 Prompt 可用的结构化文本
     5. 内置 TTL 缓存
     """
@@ -142,10 +142,64 @@ class BusinessRuleRetriever:
     # ---- 检索 ----
 
     def search(self, query: str, top_k: int = RULES_TOP_K) -> list[RuleEntry]:
-        """关键词检索匹配的业务规则
+        """混合检索匹配的业务规则
 
-        算法：TF-IDF 余弦相似度 + 标签加权
+        优先使用百炼 ChromaDB 语义检索，失败时降级为 TF-IDF 关键词匹配。
         """
+        # 尝试 ChromaDB 语义检索
+        entries = self._search_chromadb(query, top_k)
+        if entries:
+            return entries
+
+        # 降级：TF-IDF 关键词检索
+        logger.debug("ChromaDB 索引不可用，降级为 TF-IDF 关键词检索")
+        return self._search_keyword(query, top_k)
+
+    def _search_chromadb(self, query: str, top_k: int) -> list[RuleEntry]:
+        """通过 ChromaDB（百炼 Embedding）语义检索
+
+        Returns:
+            匹配的 RuleEntry 列表；若索引为空或调用失败则返回空列表。
+        """
+        try:
+            from pmb.rag.business_rule_store import BusinessRuleStore
+            store = BusinessRuleStore()
+            if store.count <= 0:
+                return []
+
+            raw_results = store.search(query, top_k=top_k)
+
+            entries: list[RuleEntry] = []
+            seen_ids: set[str] = set()
+            for r in raw_results:
+                meta = r.get("metadata", {})
+                rule_id = meta.get("rule_id", "")
+                if rule_id in seen_ids:
+                    continue
+                seen_ids.add(rule_id)
+
+                # ChromaDB distance 越小越相似，转换为 score（越大越好）
+                distance = r.get("distance", 999.0)
+                score = max(0.0, 1.0 - distance)  # cosine distance → similarity score
+
+                entries.append(RuleEntry(
+                    rule_id=rule_id,
+                    scenario=meta.get("scenario", ""),
+                    speech=self._extract_speech(r.get("text", "")),
+                    tags=meta.get("tags", ""),
+                    source_file=meta.get("source_file", ""),
+                    score=round(score, 4),
+                ))
+
+            entries.sort(key=lambda e: e.score, reverse=True)
+            logger.debug("ChromaDB 语义检索: '%s' → %d 条规则", query[:30], len(entries))
+            return entries
+        except Exception as e:
+            logger.debug("ChromaDB 语义检索失败: %s", e)
+            return []
+
+    def _search_keyword(self, query: str, top_k: int) -> list[RuleEntry]:
+        """TF-IDF 关键词检索（降级方案）"""
         if not self.ensure_loaded():
             return []
 
