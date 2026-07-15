@@ -26,6 +26,7 @@ dependencies:
   shimmer: ^3.0.0
   animations: ^2.0.8
   smooth_page_indicator: ^1.1.0
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:

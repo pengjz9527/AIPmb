@@ -182,8 +182,8 @@ class AppTheme {
       ),
       pageTransitionsTheme: PageTransitionsTheme(
         builders: {
-          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android: _CustomPageTransitionBuilder(),
+          TargetPlatform.iOS: _CustomPageTransitionBuilder(),
         },
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -209,6 +209,31 @@ class AppTheme {
           borderRadius: BorderRadius.circular(20),
         ),
         elevation: 8,
+      ),
+    );
+  }
+}
+
+/// 自定义页面转场：fade + 轻微上移，使用 easeOutQuart 曲线
+class _CustomPageTransitionBuilder extends PageTransitionsBuilder {
+  @override
+  Widget buildTransitions<T>(
+    PageRoute<T> route,
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    // 使用 easeOutQuart 曲线，比默认 FadeUpwards 更柔顺
+    const curve = Curves.easeOutQuart;
+    return FadeTransition(
+      opacity: CurvedAnimation(parent: animation, curve: const Interval(0.0, 0.6, curve: curve)),
+      child: SlideTransition(
+        position: Tween<Offset>(
+          begin: const Offset(0, 0.04),
+          end: Offset.zero,
+        ).animate(CurvedAnimation(parent: animation, curve: curve)),
+        child: child,
       ),
     );
   }

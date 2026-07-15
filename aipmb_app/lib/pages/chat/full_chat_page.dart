@@ -191,10 +191,12 @@ class _FullChatPageState extends ConsumerState<FullChatPage> {
         final msg = messages[index];
         final suggestions = suggestionsMap[msg.id] ?? [];
         return MessageBubble(
+          key: ValueKey(msg.id),
           message: msg,
           agentName: ref.read(chatMessagesProvider.notifier).activeAgentName,
           nextSuggestions: suggestions.isNotEmpty ? suggestions : null,
           onSuggestionTap: (s) => _sendMessage(s.prompt),
+          animateOnMount: true,
         );
       },
     );

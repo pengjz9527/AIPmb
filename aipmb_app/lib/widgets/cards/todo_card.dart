@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:aipmb_app/config/design_tokens.dart';
 import 'package:aipmb_app/models/recommendation.dart';
 
 class TodoCard extends StatelessWidget {
   final TodoItem item;
   final VoidCallback? onTap;
-  const TodoCard({super.key, required this.item, this.onTap});
+  final int? index;
+
+  const TodoCard({
+    super.key,
+    required this.item,
+    this.onTap,
+    this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    final card = Card(
       margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
         leading: _buildTypeIcon(item.type),
@@ -23,6 +32,20 @@ class TodoCard extends StatelessWidget {
         onTap: onTap,
       ),
     );
+
+    final delay = index != null ? DesignTokens.staggerDelay(index!) : DesignTokens.staggerBase;
+    return card
+        .animate(delay: delay, autoPlay: true)
+        .fadeIn(
+          duration: DesignTokens.durationEntrance,
+          curve: DesignTokens.curveEntrance,
+        )
+        .slideX(
+          begin: 0.04,
+          end: 0,
+          duration: DesignTokens.durationEntrance,
+          curve: DesignTokens.curveEntrance,
+        );
   }
 
   Widget _buildTypeIcon(String type) {

@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:aipmb_app/config/design_tokens.dart';
 import 'package:aipmb_app/models/recommendation.dart';
 
 class ProductRecommendationCard extends StatelessWidget {
   final ProductRecommendation item;
   final VoidCallback? onTap;
+  final int? index;
 
-  const ProductRecommendationCard({super.key, required this.item, this.onTap});
+  const ProductRecommendationCard({
+    super.key,
+    required this.item,
+    this.onTap,
+    this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    final card = Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
@@ -106,5 +113,18 @@ class ProductRecommendationCard extends StatelessWidget {
         ),
       ),
     );
+
+    final delay = index != null ? DesignTokens.staggerDelay(index!) : null;
+    return delay != null
+        ? card.animate(delay: delay, autoPlay: true).fadeIn(
+            duration: DesignTokens.durationEntrance,
+            curve: DesignTokens.curveEntrance,
+          ).slideY(
+            begin: 0.06,
+            end: 0,
+            duration: DesignTokens.durationEntrance,
+            curve: DesignTokens.curveEntrance,
+          )
+        : card;
   }
 }

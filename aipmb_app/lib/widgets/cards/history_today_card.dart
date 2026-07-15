@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:aipmb_app/config/design_tokens.dart';
 import 'package:aipmb_app/models/history_today.dart';
 
 class HistoryTodayCard extends StatelessWidget {
   final HistoryTodayResult result;
   final VoidCallback? onDismiss;
+  final int? index;
 
   const HistoryTodayCard({
     super.key,
     required this.result,
     this.onDismiss,
+    this.index,
   });
 
   @override
@@ -19,7 +22,7 @@ class HistoryTodayCard extends StatelessWidget {
     final benefit = result.benefit;
     if (memory == null || benefit == null) return const SizedBox.shrink();
 
-    return Card(
+    final card = Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
@@ -51,6 +54,20 @@ class HistoryTodayCard extends StatelessWidget {
         ),
       ),
     );
+
+    final delay = index != null ? DesignTokens.staggerDelay(index!) : DesignTokens.staggerBase;
+    return card
+        .animate(delay: delay, autoPlay: true)
+        .fadeIn(
+          duration: DesignTokens.durationEntrance,
+          curve: DesignTokens.curveEntrance,
+        )
+        .slideY(
+          begin: 0.06,
+          end: 0,
+          duration: DesignTokens.durationEntrance,
+          curve: DesignTokens.curveEntrance,
+        );
   }
 
   Widget _buildHeader(BuildContext context) {

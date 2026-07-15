@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:aipmb_app/models/chat_message.dart';
 import 'package:aipmb_app/models/suggestion.dart';
 import 'package:aipmb_app/models/thinking_step.dart';
@@ -14,6 +15,8 @@ class MessageBubble extends StatefulWidget {
   final String? agentName;
   final List<NextSuggestion>? nextSuggestions;
   final void Function(NextSuggestion suggestion)? onSuggestionTap;
+  /// 入场动画（仅首次挂载时播放）
+  final bool animateOnMount;
 
   const MessageBubble({
     super.key,
@@ -21,6 +24,7 @@ class MessageBubble extends StatefulWidget {
     this.agentName,
     this.nextSuggestions,
     this.onSuggestionTap,
+    this.animateOnMount = false,
   });
 
   @override
@@ -30,6 +34,13 @@ class MessageBubble extends StatefulWidget {
 class _MessageBubbleState extends State<MessageBubble> {
   bool _detailExpanded = false;
   bool _isSpeaking = false;
+  late bool _shouldAnimate;
+
+  @override
+  void initState() {
+    super.initState();
+    _shouldAnimate = widget.animateOnMount;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +49,12 @@ class _MessageBubbleState extends State<MessageBubble> {
 
     return Align(
       alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
-      child: Container(
+      child: _bubbleContainer(context, isUser, isSystem),
+    );
+  }
+
+  Widget _bubbleContainer(BuildContext context, bool isUser, bool isSystem) {
+    final bubble = Container(
         margin: const EdgeInsets.only(bottom: 12),
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.78),
         child: Row(
@@ -80,8 +96,33 @@ class _MessageBubbleState extends State<MessageBubble> {
             ],
           ],
         ),
-      ),
     );
+
+    if (_shouldAnimate && !isUser) {
+      // AI 回复：fade + slideUp 入场
+      return bubble
+          .animate(autoPlay: true)
+          .fadeIn(
+            duration: const Duration(milliseconds: 350),
+            curve: Curves.easeOutQuart,
+          )
+          .slideY(
+            begin: 0.06,
+            end: 0,
+            duration: const Duration(milliseconds: 350),
+            curve: Curves.easeOutQuart,
+          );
+    }
+    if (_shouldAnimate && isUser) {
+      // 用户消息：快速 fade 入场
+      return bubble
+          .animate(autoPlay: true)
+          .fadeIn(
+            duration: const Duration(milliseconds: 200),
+            curve: Curves.easeOut,
+          );
+    }
+    return bubble;
   }
 
   Color _bubbleColor(BuildContext context, bool isUser, bool isSystem) {

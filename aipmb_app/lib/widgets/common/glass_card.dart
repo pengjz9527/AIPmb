@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:aipmb_app/config/design_tokens.dart';
 
 /// 毛玻璃卡片 — 半透明模糊背景 + 柔和圆角 + 阴影
@@ -20,6 +21,11 @@ class GlassCard extends StatelessWidget {
   final double? width;
   final double? height;
 
+  /// 是否在挂载时播放入场动画
+  final bool animateOnMount;
+  /// 列表中的序号（用于交错动画延迟计算）
+  final int? staggerIndex;
+
   const GlassCard({
     super.key,
     required this.child,
@@ -34,6 +40,8 @@ class GlassCard extends StatelessWidget {
     this.border,
     this.width,
     this.height,
+    this.animateOnMount = false,
+    this.staggerIndex,
   });
 
   @override
@@ -65,12 +73,30 @@ class GlassCard extends StatelessWidget {
     );
 
     if (onTap != null) {
-      return GestureDetector(
-        onTap: onTap,
-        child: card,
+      return _wrapAnimation(
+        GestureDetector(onTap: onTap, child: card),
       );
     }
-    return card;
+    return _wrapAnimation(card);
+  }
+
+  Widget _wrapAnimation(Widget widget) {
+    if (!animateOnMount) return widget;
+    final delay = staggerIndex != null
+        ? DesignTokens.staggerDelay(staggerIndex!)
+        : DesignTokens.staggerBase;
+    return widget
+        .animate(delay: delay, autoPlay: true)
+        .fadeIn(
+          duration: DesignTokens.durationEntrance,
+          curve: DesignTokens.curveEntrance,
+        )
+        .slideY(
+          begin: 0.08,
+          end: 0,
+          duration: DesignTokens.durationEntrance,
+          curve: DesignTokens.curveEntrance,
+        );
   }
 }
 

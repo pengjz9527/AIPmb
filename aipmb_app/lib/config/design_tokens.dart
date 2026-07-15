@@ -38,6 +38,18 @@ class DesignTokens {
   static const Duration durationFast = Duration(milliseconds: 150);
   static const Duration durationNormal = Duration(milliseconds: 300);
   static const Duration durationSlow = Duration(milliseconds: 500);
+  static const Duration durationEntrance = Duration(milliseconds: 400);
   static const Curve curveStandard = Curves.easeOutCubic;
-  static const Curve curveSpring = Curves.elasticOut;
+  static const Curve curveEntrance = Curves.easeOutQuart;
+  static const Curve curveBounce = Curves.easeOutBack;
+
+  // ── 列表交错动画 ──
+  /// 每个卡片入场延迟间隔
+  static const Duration staggerInterval = Duration(milliseconds: 80);
+  /// 首个卡片入场延迟
+  static const Duration staggerBase = Duration(milliseconds: 100);
+
+  /// 计算第 index 个元素的入场延迟
+  static Duration staggerDelay(int index) =>
+      staggerBase + staggerInterval * index;
 }

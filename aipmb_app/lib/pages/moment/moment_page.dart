@@ -125,6 +125,7 @@ class _MomentPageState extends ConsumerState<MomentPage> {
                   if (ht.hasMemory) {
                     return HistoryTodayCard(
                       result: ht,
+                      index: 0,
                       onDismiss: () =>
                           setState(() => _dismissedHistoryToday = true),
                     );
@@ -152,22 +153,26 @@ class _MomentPageState extends ConsumerState<MomentPage> {
             todosAsync.when(
               data: (todos) => todos.isEmpty
                   ? const Padding(padding: EdgeInsets.all(16), child: Text('暂无待办'))
-                  : Column(children: todos.map((t) => TodoCard(
-                    item: t,
-                    onTap: () {
-                      if (t.type == 'payment_due') {
-                        context.push(
-                          '/channel/payment'
-                          '?payment_no=${Uri.encodeComponent(t.paymentNo ?? '')}'
-                          '&payment_type=${Uri.encodeComponent(t.paymentTypeLabel ?? '')}',
-                        );
-                      } else if (t.type == 'credit_repayment') {
-                        context.push('/held-products');
-                      } else if (t.type == 'spending_alert') {
-                        context.push('/chat?msg=${Uri.encodeComponent('帮我分析最近的消费明细')}');
-                      }
-                    },
-                  )).toList()),
+                  : Column(children: todos.asMap().entries.map((e) {
+                    final t = e.value;
+                    return TodoCard(
+                      item: t,
+                      index: e.key,
+                      onTap: () {
+                        if (t.type == 'payment_due') {
+                          context.push(
+                            '/channel/payment'
+                            '?payment_no=${Uri.encodeComponent(t.paymentNo ?? '')}'
+                            '&payment_type=${Uri.encodeComponent(t.paymentTypeLabel ?? '')}',
+                          );
+                        } else if (t.type == 'credit_repayment') {
+                          context.push('/held-products');
+                        } else if (t.type == 'spending_alert') {
+                          context.push('/chat?msg=${Uri.encodeComponent('帮我分析最近的消费明细')}');
+                        }
+                      },
+                    );
+                  }).toList()),
               loading: () => const Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator())),
               error: (e, _) => Padding(padding: const EdgeInsets.all(16), child: Text('加载失败: $e')),
             ),
@@ -842,10 +847,12 @@ class _MomentPageState extends ConsumerState<MomentPage> {
           )
         else if (displayProducts.isNotEmpty)
           Column(
-            children: displayProducts.map((p) {
+            children: displayProducts.asMap().entries.map((e) {
+              final p = e.value;
               final pr = p.toProductRecommendation();
               return ProductRecommendationCard(
                 item: pr,
+                index: e.key,
                 onTap: () => context.push(
                   '/product/detail?product_name=${Uri.encodeComponent(p.productName)}',
                 ),

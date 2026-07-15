@@ -55,6 +55,7 @@ class RecommendationPage extends ConsumerWidget {
                 final product = products[index - 1];
                 return ProductRecommendationCard(
                   item: product,
+                  index: index - 1,
                   onTap: () => _showProductDetail(context, product),
                 );
               },
