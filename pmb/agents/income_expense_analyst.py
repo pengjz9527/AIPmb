@@ -1,7 +1,6 @@
-"""收支分析智能体 — 独立 Agent，提供多轮对话收支分析、模式检测、主动建议"""
+"""收支分析专家智能体 — 整合收支分析、消费续航测算、生活推荐能力"""
 import asyncio
-import json
-from pmb.agents.base import BaseAgent, AgentContext, AgentResult
+from pmb.agents.base import BaseAgent, AgentContext
 
 
 # 规则引擎：检测条件 → 建议
@@ -77,6 +76,13 @@ EXIT_KEYWORDS = ["返回", "换个话题", "退出", "回小易", "切换助手"
 
 class IncomeExpenseAnalystAgent(BaseAgent):
 
+    managed_skills = [
+        "consumption_analysis", "income_forecast",
+        "expense_pattern_detector", "calculate_survival",
+        "life_recommendation", "reimbursement_organizer",
+        "hidden_habits_explorer", "payment_reminder", "history_today",
+    ]
+
     def __init__(self):
         super().__init__()
         self._root_suggestions: list[dict] = []  # 缓存首轮建议，供后续轮次回归
@@ -87,11 +93,11 @@ class IncomeExpenseAnalystAgent(BaseAgent):
 
     @property
     def name(self) -> str:
-        return "收支分析师"
+        return "收支分析专家"
 
     @property
     def description(self) -> str:
-        return "专业分析您的收入支出状况，发现消费模式，提供省钱建议"
+        return "专业分析收支状况，测算消费续航能力，发现消费模式，推荐匹配产品和优惠"
 
     @property
     def avatar(self) -> str:
@@ -99,26 +105,33 @@ class IncomeExpenseAnalystAgent(BaseAgent):
 
     @property
     def system_prompt(self) -> str:
-        return """你是招商银行AI收支分析师，专注于帮用户分析收入与支出状况。
+        return """你是招商银行AI收支分析专家，专注帮用户管理财务健康。
 
 核心能力：
 1. 收支总览：分析月度/年度收入与支出趋势，识别异常波动
 2. 消费结构分析：按分类（餐饮/交通/购物/住房等）拆解支出构成
 3. 收入来源分析：工资、投资收益、其他收入的结构和稳定性
-4. 省钱建议：基于消费模式给出可执行的优化建议
+4. 消费续航测算：计算"如果没了收入还能撑多久"，区分维持现状和最低生存两个档次，给出逐项降级建议
+5. 生活推荐：基于消费习惯画像，推荐匹配的银行产品和优惠活动，每条推荐附带数据支撑的原因
+6. 省钱建议：基于消费模式给出可执行的优化建议
 
 可用工具（通过 function calling 调用）：
 - income_forecast：收入趋势预测、收支平衡分析、消费规划
 - consumption_analysis：消费分析和续航测算
 - expense_pattern_detector：检测消费模式（周期性扣款、异常支出、重复消费等）
+- calculate_survival：计算无收入情况下的资金续航月数
+- life_recommendation：基于消费画像推荐匹配的产品和优惠
 - reimbursement_organizer：整理差旅报销清单
-- query_transactions：查询交易明细
-- collect_consumption_data：查询消费统计
+- hidden_habits_explorer：从交易中发现有趣生活习惯
+- payment_reminder：预测近期待缴费任务
+- history_today：检索往年同日交易记忆
 - collect_account_data：查询账户信息
+- collect_consumption_data：查询消费统计
+- collect_transaction_data：查询交易明细
 
 输出规则 — 严格按轮次分层：
 
-【首轮】用户首次询问收支时：
+【首轮】用户首次询问时：
 - 只输出简洁的统计概览（收入/支出/结余 + 主要分类），用简短的表格即可
 - 不要展开详细解读、不要给长篇分析、不要主动深入某个维度
 - 末尾不要自己输出建议列表，系统会自动在气泡下方附带可点击的建议条目
@@ -134,13 +147,19 @@ class IncomeExpenseAnalystAgent(BaseAgent):
 分析风格：
 - 中文回复，金额格式化为 ¥x,xxx.xx
 - 用 Markdown 格式，使用标题、列表、表格使内容清晰
+- 续航分析时给出"现状诊断"、"续航测算"、"降级方案"、"极限续航"四个板块
+- 生活推荐时每条推荐附带数据支撑的推荐原因
 - 友好但专业"""
 
     def can_handle(self, user_message: str) -> float:
         """意图匹配度评分"""
-        strong_keywords = ["收支", "收入分析", "支出分析", "收支分析", "省钱"]
-        medium_keywords = ["消费", "花费", "开销", "钱花在哪", "花了多少"]
-        weak_keywords = ["收入", "工资", "账单", "预算", "省钱计划"]
+        strong_keywords = ["收支", "收入分析", "支出分析", "收支分析", "省钱",
+                           "撑多久", "收入中断", "失业", "还能撑", "消费分析"]
+        medium_keywords = ["消费", "花费", "开销", "钱花在哪", "花了多少",
+                           "降消费", "节省", "预算", "断粮", "生活费", "节约"]
+        weak_keywords = ["收入", "工资", "账单", "省钱计划", "消费真相", "财务危机",
+                         "推荐", "优惠", "适合我", "有什么活动", "办卡", "生活", "便利",
+                         "好物", "福利", "活动", "权益"]
 
         msg = user_message.lower()
         score = 0.0
@@ -154,12 +173,6 @@ class IncomeExpenseAnalystAgent(BaseAgent):
             if kw in msg:
                 score += 0.10
         return min(score, 1.0)
-
-    async def analyze(self, context: AgentContext) -> AgentResult:
-        """兼容旧接口"""
-        queue = asyncio.Queue()
-        await self.analyze_stream(context, queue)
-        return AgentResult(agent_id=self.agent_id, agent_name=self.name, content="", cards=[])
 
     async def analyze_stream(
         self, context: AgentContext, event_queue: asyncio.Queue
@@ -177,9 +190,8 @@ class IncomeExpenseAnalystAgent(BaseAgent):
     async def _analyze_stream_impl(
         self, context: AgentContext, event_queue: asyncio.Queue
     ) -> None:
-        from pmb.llm.qwen import QwenLLM
         from pmb.llm.context_manager import context_manager
-        from pmb.llm.tool_registry import ALL_TOOLS, execute_tool
+        from pmb.llm.tool_registry import ALL_TOOLS
         from pmb.skills.orchestrator import skill_orchestrator
 
         conv = context_manager.get_or_create(context.session_id)
@@ -190,7 +202,6 @@ class IncomeExpenseAnalystAgent(BaseAgent):
                           m.get("agent_id") == self.agent_id])
 
         if round_count > 0:
-            # 条件1: 用户明确退出
             if any(kw in context.user_message for kw in EXIT_KEYWORDS):
                 await event_queue.put({
                     "type": "agent_changed",
@@ -203,7 +214,6 @@ class IncomeExpenseAnalystAgent(BaseAgent):
                     await ga.analyze_stream(context, event_queue)
                 return
 
-            # 条件2: 意图匹配度低
             score = self.can_handle(context.user_message)
             if score < 0.15:
                 await event_queue.put({
@@ -217,7 +227,6 @@ class IncomeExpenseAnalystAgent(BaseAgent):
                     await ga.analyze_stream(context, event_queue)
                 return
 
-        # 注入 system_prompt
         enhanced_prompt = self.system_prompt
         if context.memory_summary:
             enhanced_prompt += "\n" + context.memory_summary
@@ -226,260 +235,54 @@ class IncomeExpenseAnalystAgent(BaseAgent):
         messages = conv.get_messages()
         messages.append({"role": "user", "content": context.user_message})
 
-        llm = QwenLLM()
-        # 合并工具: ALL_TOOLS + Skills（该Agent需要的skill）
         all_tools = list(ALL_TOOLS) + [
             t for t in skill_orchestrator.to_openai_tools()
             if t["function"]["name"] in {
                 "income_forecast", "consumption_analysis",
                 "expense_pattern_detector", "reimbursement_organizer",
+                "calculate_survival", "life_recommendation",
+                "hidden_habits_explorer", "payment_reminder", "history_today",
                 "collect_account_data", "collect_consumption_data",
                 "collect_transaction_data",
             }
         ]
 
-        # === 阶段1: 意图识别 ===
+        content_buffer, collected_skill_data = await self._run_llm_loop(
+            context, event_queue, messages, all_tools,
+            skill_orchestrator, step_id_prefix="ie",
+        )
+
+        # === 阶段5: 建议生成 ===
         await event_queue.put({
             "type": "thinking_step",
-            "step_id": "phase_intent_ie",
-            "skill_name": "_orchestrator",
-            "display_name": "意图识别",
+            "step_id": "phase_suggest_ie",
+            "skill_name": "_suggestion_engine",
+            "display_name": "建议生成",
             "status": "invoking",
-            "message": "识别收支分析意图...",
-            "phase": "intent",
-            "phase_order": 1,
+            "message": "基于消费模式生成下一步建议...",
+            "phase": "analyze",
+            "phase_order": 5,
         })
 
-        max_rounds = 5
-        content_buffer = ""
-        collected_skill_data: dict = {}
+        suggestions = self._generate_suggestions(
+            collected_skill_data, content_buffer,
+            is_first_round=(round_count == 0),
+        )
 
-        while max_rounds > 0:
-            stream = llm.chat_stream(messages=messages, tools=all_tools)
-            reasoning_buffer = ""
-            tool_calls_buffer: list = []
+        await event_queue.put({
+            "type": "thinking_step",
+            "step_id": "phase_suggest_ie",
+            "skill_name": "_suggestion_engine",
+            "display_name": "建议生成",
+            "status": "completed",
+            "message": f"生成了{len(suggestions)}条下一步建议",
+            "phase": "analyze",
+            "phase_order": 5,
+        })
 
-            async for chunk in stream:
-                # 推理链
-                if chunk.reasoning_content:
-                    reasoning_buffer += chunk.reasoning_content
-                    await event_queue.put({
-                        "type": "reasoning_chunk",
-                        "content": chunk.reasoning_content,
-                    })
-
-                # 文本内容
-                if chunk.content:
-                    content_buffer += chunk.content
-                    await event_queue.put({
-                        "type": "ai_chunk",
-                        "content": chunk.content,
-                        "is_final": False,
-                    })
-
-                # 工具调用
-                if chunk.tool_calls:
-                    for tc in chunk.tool_calls:
-                        skill_display = self._skill_display_name(tc.name)
-                        # 意图识别完成
-                        await event_queue.put({
-                            "type": "thinking_step",
-                            "step_id": "phase_intent_ie",
-                            "skill_name": "_orchestrator",
-                            "display_name": "意图识别",
-                            "status": "completed",
-                            "message": f"识别为收支分析，将调用{skill_display}获取数据",
-                            "phase": "intent",
-                            "phase_order": 1,
-                        })
-                        # === 阶段2: Skill编排 ===
-                        await event_queue.put({
-                            "type": "thinking_step",
-                            "step_id": "phase_orchestrate_ie",
-                            "skill_name": "_orchestrator",
-                            "display_name": "Skill编排",
-                            "status": "invoking",
-                            "message": f"编排执行计划...",
-                            "phase": "orchestrate",
-                            "phase_order": 2,
-                        })
-                        # === 阶段3: 数据收集 ===
-                        await event_queue.put({
-                            "type": "thinking_step",
-                            "step_id": tc.id or f"call_{len(tool_calls_buffer)}",
-                            "skill_name": tc.name,
-                            "display_name": skill_display,
-                            "status": "invoking",
-                            "message": f"正在调用{skill_display}...",
-                            "phase": "collect",
-                            "phase_order": 3,
-                        })
-                        tool_calls_buffer.append(tc)
-
-            # 处理 tool calls
-            if tool_calls_buffer:
-                assistant_msg = {
-                    "role": "assistant",
-                    "content": content_buffer or None,
-                    "tool_calls": [
-                        {
-                            "id": tc.id or f"call_{i}",
-                            "type": "function",
-                            "function": {
-                                "name": tc.name,
-                                "arguments": json.dumps(tc.arguments, ensure_ascii=False),
-                            },
-                        }
-                        for i, tc in enumerate(tool_calls_buffer)
-                    ],
-                }
-                if reasoning_buffer:
-                    assistant_msg["reasoning_content"] = reasoning_buffer
-                messages.append(assistant_msg)
-
-                for tc in tool_calls_buffer:
-                    tc_id = tc.id or f"call_{len(collected_skill_data)}"
-                    try:
-                        if tc.name in skill_orchestrator.get_skill_names():
-                            result, summary = await skill_orchestrator.execute_skill(
-                                tc.name, tc.arguments,
-                                user_name=context.user_name,
-                                session_id=context.session_id,
-                            )
-                            collected_skill_data[tc.name] = result.data if hasattr(result, 'data') else {}
-                        else:
-                            raw_result = await execute_tool(tc.name, tc.arguments, user_name=context.user_name)
-                            result = raw_result
-                            summary = f"工具 {tc.name} 执行完成"
-
-                        await event_queue.put({
-                            "type": "thinking_step",
-                            "step_id": tc_id,
-                            "skill_name": tc.name,
-                            "display_name": self._skill_display_name(tc.name),
-                            "status": "completed",
-                            "message": summary if isinstance(summary, str) else str(summary),
-                            "phase": "collect",
-                            "phase_order": 3,
-                        })
-
-                        tool_content = (
-                            json.dumps(result.data, ensure_ascii=False)
-                            if hasattr(result, 'data')
-                            else str(result)
-                        )
-                    except Exception as e:
-                        tool_content = json.dumps({"error": str(e)}, ensure_ascii=False)
-                        await event_queue.put({
-                            "type": "thinking_step",
-                            "step_id": tc_id,
-                            "skill_name": tc.name,
-                            "display_name": self._skill_display_name(tc.name),
-                            "status": "error",
-                            "message": f"执行出错: {str(e)}",
-                            "phase": "collect",
-                            "phase_order": 3,
-                        })
-
-                    messages.append({
-                        "role": "tool",
-                        "tool_call_id": tc_id,
-                        "content": tool_content,
-                    })
-
-                # Skill编排完成
-                await event_queue.put({
-                    "type": "thinking_step",
-                    "step_id": "phase_orchestrate_ie",
-                    "skill_name": "_orchestrator",
-                    "display_name": "Skill编排",
-                    "status": "completed",
-                    "message": f"已完成{len(tool_calls_buffer)}个技能的数据收集",
-                    "phase": "orchestrate",
-                    "phase_order": 2,
-                })
-
-                # === 阶段4: 分析生成 ===
-                await event_queue.put({
-                    "type": "thinking_step",
-                    "step_id": "phase_analyze_ie",
-                    "skill_name": "_orchestrator",
-                    "display_name": "分析生成",
-                    "status": "invoking",
-                    "message": "基于收支数据生成分析报告...",
-                    "phase": "analyze",
-                    "phase_order": 4,
-                })
-
-                await event_queue.put({"type": "thinking_done"})
-                max_rounds -= 1
-                continue  # 回到循环顶部，继续 LLM 生成分析
-
-            # 无 tool_calls，这是最终回复
-            # 分析生成完成
-            await event_queue.put({
-                "type": "thinking_step",
-                "step_id": "phase_analyze_ie",
-                "skill_name": "_orchestrator",
-                "display_name": "分析生成",
-                "status": "completed",
-                "message": "收支分析报告已生成",
-                "phase": "analyze",
-                "phase_order": 4,
-            })
-
-            # === 阶段5: 建议生成 ===
-            await event_queue.put({
-                "type": "thinking_step",
-                "step_id": "phase_suggest_ie",
-                "skill_name": "_suggestion_engine",
-                "display_name": "建议生成",
-                "status": "invoking",
-                "message": "基于消费模式生成下一步建议...",
-                "phase": "analyze",
-                "phase_order": 5,
-            })
-
-            suggestions = self._generate_suggestions(collected_skill_data, content_buffer, is_first_round=(round_count == 0))
-            # [已禁用] LLM 润色步骤 — 因多轮对话中 5→3 条截断导致 root 建议丢失
-            # 如需回退，取消下方注释即可
-            # if suggestions:
-            #     suggestions_prompt = self._build_suggestions_prompt(suggestions, content_buffer)
-            #     try:
-            #         llm_small = QwenLLM()
-            #         resp = await llm_small.chat(
-            #             messages=[{"role": "user", "content": suggestions_prompt}],
-            #             tools=[],
-            #         )
-            #         parsed = self._parse_suggestions(resp.content)
-            #         if parsed:
-            #             for i, ps in enumerate(parsed):
-            #                 if i < len(suggestions):
-            #                     ps['group'] = suggestions[i].get('group', 'root')
-            #             suggestions = parsed
-            #     except Exception:
-            #         pass
-
-            await event_queue.put({
-                "type": "thinking_step",
-                "step_id": "phase_suggest_ie",
-                "skill_name": "_suggestion_engine",
-                "display_name": "建议生成",
-                "status": "completed",
-                "message": f"生成了{len(suggestions)}条下一步建议",
-                "phase": "analyze",
-                "phase_order": 5,
-            })
-
-            conv.add_message("user", context.user_message)
-            conv.add_message("assistant", content_buffer)
-            await event_queue.put({
-                "type": "ai_done",
-                "content": content_buffer,
-                "is_final": True,
-                "next_suggestions": suggestions,
-            })
-            break
+        conv.add_message("user", context.user_message)
+        conv.add_message("assistant", content_buffer)
+        await self._emit_ai_done(event_queue, content_buffer, suggestions)
 
     # ===== 建议生成辅助方法 =====
 
@@ -688,17 +491,3 @@ class IncomeExpenseAnalystAgent(BaseAgent):
                     "reason": "",
                 })
         return suggestions[:3]
-
-    @staticmethod
-    def _skill_display_name(name: str) -> str:
-        """技能名称中文展示"""
-        mapping = {
-            "income_forecast": "收入趋势预测",
-            "consumption_analysis": "消费分析",
-            "expense_pattern_detector": "消费模式检测",
-            "reimbursement_organizer": "报销清单整理",
-            "collect_account_data": "查询账户数据",
-            "collect_consumption_data": "查询消费统计",
-            "collect_transaction_data": "查询交易明细",
-        }
-        return mapping.get(name, name)

@@ -39,10 +39,8 @@ class AgentEntryCard extends StatelessWidget {
     switch (agentId) {
       case 'financial_planner':
         return Icons.trending_up;
-      case 'consumption_analyst':
+      case 'income_expense_analyst':
         return Icons.analytics;
-      case 'life_assistant':
-        return Icons.favorite_outline;
       case 'user_profiler':
         return Icons.person_search;
       default:

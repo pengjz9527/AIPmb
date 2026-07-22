@@ -32,8 +32,8 @@ class ApiConfig {
   static const String uploadImage = '/api/v1/upload/image';
   static const String uploadVoice = '/api/v1/upload/voice';
   static const String authLogin = '/api/v1/auth/login';
-  static const String domainSkills = '/api/v1/skills/domain';
   static const String historyToday = '/api/v1/skills/history-today';
+  static const String neighborhoodProfile = '/api/v1/skills/neighborhood';
   static const String purchases = '/api/v1/purchases';
   static const String riskAssessment = '/api/v1/risk-assessment';
   static const String calendarGenerate = '/api/v1/manage/calendar';      // POST {name}/generate-async

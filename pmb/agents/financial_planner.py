@@ -1,8 +1,17 @@
 """理财专家智能体"""
+import asyncio
+import logging
 from pmb.agents.base import BaseAgent, AgentContext, AgentResult
+
+logger = logging.getLogger(__name__)
 
 
 class FinancialPlannerAgent(BaseAgent):
+
+    managed_skills = [
+        "financial_planning", "loan_cost_optimizer",
+        "loan_product_recommendation",
+    ]
 
     @property
     def agent_id(self) -> str:
@@ -60,15 +69,72 @@ class FinancialPlannerAgent(BaseAgent):
         except Exception:
             return ""
 
+    async def analyze_stream(
+        self, context: AgentContext, event_queue: asyncio.Queue
+    ) -> None:
+        """流式分析与响应"""
+        try:
+            await self._analyze_stream_impl(context, event_queue)
+        except Exception as e:
+            await event_queue.put({
+                "type": "error",
+                "content": f"理财规划出错: {str(e)}",
+                "is_final": True,
+            })
+
+    async def _analyze_stream_impl(
+        self, context: AgentContext, event_queue: asyncio.Queue
+    ) -> None:
+        from pmb.llm.context_manager import context_manager
+        from pmb.llm.tool_registry import ALL_TOOLS
+        from pmb.skills.orchestrator import skill_orchestrator
+
+        conv = context_manager.get_or_create(context.session_id)
+
+        enhanced_prompt = self.system_prompt
+        if context.memory_summary:
+            enhanced_prompt += "\n" + context.memory_summary
+
+        # 注入业务规则约束（RAG 检索）
+        try:
+            business_rules = self._get_business_rules(context.user_message)
+            if business_rules:
+                enhanced_prompt += f"\n\n## 业务规则约束\n{business_rules}"
+        except Exception as e:
+            logger.warning(f"业务规则注入失败: {e}")
+
+        conv.set_system_prompt(enhanced_prompt)
+
+        messages = conv.get_messages()
+        messages.append({"role": "user", "content": context.user_message})
+
+        all_tools = list(ALL_TOOLS) + [
+            t for t in skill_orchestrator.to_openai_tools()
+            if t["function"]["name"] in {
+                "financial_planning", "loan_cost_optimizer",
+                "loan_product_recommendation",
+                "collect_account_data", "collect_product_data",
+                "collect_consumption_data",
+            }
+        ]
+
+        content_buffer, _ = await self._run_llm_loop(
+            context, event_queue, messages, all_tools,
+            skill_orchestrator, step_id_prefix="fp",
+        )
+
+        conv.add_message("user", context.user_message)
+        conv.add_message("assistant", content_buffer)
+        await self._emit_ai_done(event_queue, content_buffer)
+
     async def analyze(self, context: AgentContext) -> AgentResult:
+        """同步分析（兼容旧接口，内部使用流式）"""
         data = await self._collect_data(context)
 
-        # 额外收集月度消费数据
         from pmb.core import consumption_service, product_service
         monthly_stats = consumption_service.get_consumption_stats(group_by="month", top=6, user_name=context.user_name)
         subcategory_stats = consumption_service.get_consumption_stats(group_by="subcategory", top=10, user_name=context.user_name)
 
-        # 获取推荐产品
         wealth_products, _ = product_service.list_products(category="wealth", limit=5)
         fund_products, _ = product_service.list_products(category="fund", limit=3)
         deposit_products, _ = product_service.list_products(category="deposit", limit=3)
@@ -111,5 +177,5 @@ class FinancialPlannerAgent(BaseAgent):
                     "products": [p.get("产品名称/类别", p.get("产品名称", "")) for p in wealth_products[:3]],
                 }},
             ],
-            suggested_agents=["consumption_analyst", "user_profiler"],
+            suggested_agents=["income_expense_analyst", "user_profiler"],
         )

@@ -161,12 +161,8 @@ class _AgentChatPageState extends ConsumerState<AgentChatPage> {
     switch (agentId) {
       case 'financial_planner':
         return ['帮我制定理财方案', '分析我的资产配置', '如何优化收益'];
-      case 'consumption_analyst':
-        return ['没有收入能撑多久', '分析我的消费结构', '降低消费建议'];
       case 'income_expense_analyst':
-        return ['分析收支状况', '消费结构分析', '省钱建议', '整理差旅报销'];
-      case 'life_assistant':
-        return ['推荐适合我的产品', '有什么优惠活动', '根据我的画像推荐'];
+        return ['分析收支状况', '消费结构分析', '省钱建议', '没有收入能撑多久', '推荐适合我的产品'];
       case 'user_profiler':
         return ['我是怎样的人', '给我有趣的建议', '分析我的消费画像'];
       default:

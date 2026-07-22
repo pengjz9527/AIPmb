@@ -1,8 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from starlette.types import Scope, Receive, Send
+
+# 项目根目录
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+LANDING_HTML = PROJECT_ROOT / "landing" / "index.html"
+IOS_HTML = PROJECT_ROOT / "landing" / "ios.html"
 
 from pmb.api.routers import (
     account_router,
@@ -115,10 +121,29 @@ def create_app() -> FastAPI:
     uploads_dir.mkdir(exist_ok=True)
     app.mount("/uploads", StaticFiles(directory=str(uploads_dir)), name="uploads")
 
+    # 安装包下载目录
+    downloads_dir = Path(__file__).parent.parent.parent / "downloads"
+    downloads_dir.mkdir(exist_ok=True)
+    app.mount("/downloads", StaticFiles(directory=str(downloads_dir)), name="downloads")
+
     # AI-Manage 运营管理前端 (Flutter Web, 同源部署在 /manage)
     manage_web_dir = Path(__file__).parent.parent.parent / "aipmb_manage" / "build" / "web"
     if manage_web_dir.exists():
         app.mount("/manage", SPAMiddleware(directory=str(manage_web_dir)), name="manage_web")
+
+    # 根路径 — AI原生手机银行介绍页
+    @app.get("/", response_class=HTMLResponse)
+    async def landing_page():
+        if LANDING_HTML.exists():
+            return LANDING_HTML.read_text(encoding="utf-8")
+        return "<h1>AI 原生手机银行</h1><p>介绍页面建设中…</p>"
+
+    # iOS 版本说明页
+    @app.get("/ios", response_class=HTMLResponse)
+    async def ios_page():
+        if IOS_HTML.exists():
+            return IOS_HTML.read_text(encoding="utf-8")
+        return "<h1>iOS 版本</h1><p>页面建设中…</p>"
 
     @app.get("/api/v1/health")
     async def health_check():

@@ -6,7 +6,7 @@ from pmb.agents.base import BaseAgent
 class AgentRegistry:
     """智能体注册表 + 意图路由分发器"""
 
-    ROUTE_THRESHOLD = 0.3  # 低于此分数路由到通用助手
+    ROUTE_THRESHOLD = 0.2  # 低于此分数路由到通用助手
 
     def __init__(self):
         self._agents: dict[str, BaseAgent] = {}
@@ -63,9 +63,15 @@ def _register_all_agents():
     """注册所有智能体"""
     from pmb.agents.general_assistant import GeneralAssistantAgent
     from pmb.agents.income_expense_analyst import IncomeExpenseAnalystAgent
+    from pmb.agents.financial_planner import FinancialPlannerAgent
+    from pmb.agents.user_profiler import UserProfilerAgent
+    from pmb.agents.lifestyle_agent import LifestyleAgent
 
     agent_registry.register(GeneralAssistantAgent())
     agent_registry.register(IncomeExpenseAnalystAgent())
+    agent_registry.register(FinancialPlannerAgent())
+    agent_registry.register(UserProfilerAgent())
+    agent_registry.register(LifestyleAgent())
 
 
 # 自动注册

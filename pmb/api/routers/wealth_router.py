@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Header
+from datetime import datetime, timedelta
 from pmb.core import account_service
+from pmb.core.transaction_service import _merge_transactions
 from pmb.ai_manage.services import held_product_service
 from pmb.api.schemas.common import ApiResponse
 from urllib.parse import unquote
@@ -95,10 +97,33 @@ async def get_wealth_overview(user_name: str = Header("", alias="x-user-name")):
 
     net_worth = total_assets - total_liabilities
 
+    # 月度收支统计
+    today = datetime.now()
+    this_month_start = today.replace(day=1).strftime("%Y-%m-%d")
+    this_month_end = today.strftime("%Y-%m-%d")
+    last_day_prev = today.replace(day=1) - timedelta(days=1)
+    last_month_start = last_day_prev.replace(day=1).strftime("%Y-%m-%d")
+    last_month_end = last_day_prev.strftime("%Y-%m-%d")
+
+    def _sum_month(date_from: str, date_to: str):
+        txns = _merge_transactions(
+            "all", "", "", "", "", date_from, date_to, None, None, user_name,
+        )
+        income = sum(t["交易金额"] for t in txns if t["收支方向"] == "收入")
+        expense = sum(t["交易金额"] for t in txns if t["收支方向"] == "支出")
+        return round(income, 2), round(expense, 2)
+
+    monthly_income, monthly_expense = _sum_month(this_month_start, this_month_end)
+    last_month_income, last_month_expense = _sum_month(last_month_start, last_month_end)
+
     return ApiResponse(data={
         "total_assets": round(total_assets, 2),
         "total_liabilities": round(total_liabilities, 2),
         "net_worth": round(total_assets - total_liabilities, 2),
         "asset_breakdown": asset_breakdown,
         "currency": "CNY",
+        "monthly_income": monthly_income,
+        "monthly_expense": monthly_expense,
+        "last_month_income": last_month_income,
+        "last_month_expense": last_month_expense,
     })

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 原生手机银行</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a2e; background: #f5f7fa; line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+
+  header {
+    text-align: center; padding: 60px 0 40px;
+    border-bottom: 1px solid #e2e8f0; margin-bottom: 48px;
+  }
+  header h1 { font-size: 28px; font-weight: 700; letter-spacing: 1px; }
+  header p  { color: #64748b; font-size: 15px; margin-top: 10px; }
+
+  section { margin-bottom: 44px; }
+  section h2 {
+    font-size: 18px; font-weight: 600; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 2px solid #3b82f6; display: inline-block;
+  }
+
+  .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .concept-card {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;
+  }
+  .concept-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: #3b82f6; }
+  .concept-card p  { font-size: 13px; color: #475569; }
+
+  .download-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .download-btn {
+    flex: 1; min-width: 160px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px; border-radius: 8px; text-decoration: none;
+    font-size: 15px; font-weight: 600; color: #fff; transition: opacity .15s;
+  }
+  .download-btn:hover { opacity: .88; }
+  .btn-android { background: #10b981; }
+  .btn-ios     { background: #1a1a2e; }
+
+  .register-box {
+    background: #fff; border: 1px dashed #cbd5e1; border-radius: 8px;
+    padding: 24px; text-align: center;
+  }
+  .register-box p { font-size: 14px; color: #64748b; margin-bottom: 12px; }
+  .register-link {
+    display: inline-block; padding: 10px 28px; border-radius: 6px;
+    background: #3b82f6; color: #fff; text-decoration: none;
+    font-size: 14px; font-weight: 500;
+  }
+  .register-link:hover { opacity: .88; }
+
+  footer { text-align: center; color: #94a3b8; font-size: 12px; margin-top: 40px; }
+
+  @media (max-width: 500px) {
+    .concept-grid { grid-template-columns: 1fr; }
+    .download-row  { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>AI 原生手机银行</h1>
+  <p>以 AI 为核心驱动，重塑个人金融服务体验</p>
+</header>
+
+<!-- 模块一：设计理念 & 产品能力 -->
+<section>
+  <h2>设计理念 &amp; 产品能力</h2>
+  <div class="concept-grid">
+    <div class="concept-card">
+      <h3>AI 原生架构</h3>
+      <p>以多智能体协同框架为核心，对话即服务。用户通过自然语言即可完成账户查询、交易分析、产品推荐等全部操作。</p>
+    </div>
+    <div class="concept-card">
+      <h3>意图理解引擎</h3>
+      <p>深度理解用户金融意图，自动路由至对应智能体。财务规划、风险测评、缴费提醒等场景无缝切换。</p>
+    </div>
+    <div class="concept-card">
+      <h3>RAG 合规约束</h3>
+      <p>内置监管规则知识库，所有 AI 回复均经过业务规则实时校验，确保合规、准确、可追溯。</p>
+    </div>
+    <div class="concept-card">
+      <h3>全品类金融覆盖</h3>
+      <p>支持存款、理财、基金、保险、外汇、黄金、贷款、信用卡等零售业务全品类查询与办理。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 模块二：APP 下载 -->
+<section>
+  <h2>APP 下载</h2>
+  <div class="download-row">
+    <a class="download-btn btn-android" href="/downloads/AIPmb-1.0.0.apk">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+      Android 版本
+    </a>
+    <a class="download-btn btn-ios" href="/ios">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+      iOS 版本
+    </a>
+  </div>
+</section>
+
+<!-- 模块三：申请登记 -->
+<section>
+  <h2>申请登记</h2>
+  <div class="register-box">
+    <p>如需获取 APP 安装包或开通体验账号，请点击下方链接提交申请。</p>
+    <a class="register-link" href="#register">提交申请（建设中）</a>
+  </div>
+</section>
+
+<footer>© 2026 AI 原生手机银行 · 版本 0.1.0</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+# IDE
+.qoder/
+.qoder.archived/
+.qoder.backup.*/
+.idea/
+.lingma/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Git
+.git/
+.gitignore
+
+# macOS
+.DS_Store
+Thumbs.db
+
+# Flutter source (only need built web output)
+aipmb_app/
+aipmb_manage/.dart_tool/
+aipmb_manage/lib/
+aipmb_manage/pubspec.*
+aipmb_manage/android/
+aipmb_manage/ios/
+aipmb_manage/test/
+aipmb_manage/web/
+aipmb_manage/.flutter-plugins*
+
+# Node / PPT / Docs
+aipmb-ppt/
+docs/
+*.md
+*.png
+*.jpg
+!data/*.png
+!data/*.jpg
+
+# Misc
+tests/
+skill-sample/
+output/*

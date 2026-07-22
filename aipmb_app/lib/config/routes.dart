@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:aipmb_app/pages/main_shell.dart';
 import 'package:aipmb_app/pages/moment/moment_page.dart';
 import 'package:aipmb_app/pages/mine/mine_page.dart';
-import 'package:aipmb_app/pages/ai_service/ai_service_page.dart';
+import 'package:aipmb_app/pages/explore/explore_page.dart';
 import 'package:aipmb_app/pages/agent/agent_chat_page.dart';
 import 'package:aipmb_app/pages/agent/agent_report_page.dart';
 import 'package:aipmb_app/pages/chat/full_chat_page.dart';
@@ -68,8 +68,8 @@ GoRouter buildRouter(WidgetRef ref) {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/ai-service',
-                builder: (context, state) => const AiServicePage(),
+                path: '/explore',
+                builder: (context, state) => const ExplorePage(),
               ),
             ],
           ),
@@ -153,7 +153,9 @@ GoRouter buildRouter(WidgetRef ref) {
       GoRoute(
         path: '/calendar',
         builder: (context, state) {
-          final userName = state.uri.queryParameters['user'] ?? '';
+          final userName = state.uri.queryParameters['user'] ??
+              ref.read(authProvider).asData?.value?.name ??
+              '';
           return CalendarResultPage(userName: userName);
         },
       ),

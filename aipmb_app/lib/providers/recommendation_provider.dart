@@ -1,9 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aipmb_app/models/recommendation.dart';
 import 'package:aipmb_app/models/user_profile.dart';
-import 'package:aipmb_app/models/skill_card.dart';
 import 'package:aipmb_app/models/history_today.dart';
 import 'package:aipmb_app/models/match_progress.dart';
+import 'package:aipmb_app/models/transaction.dart';
+import 'package:aipmb_app/models/ai_insight.dart';
 import 'package:aipmb_app/services/api_client.dart';
 import 'package:aipmb_app/config/api_config.dart';
 
@@ -34,21 +35,19 @@ final profileTagsProvider = FutureProvider<UserProfileTags>((ref) async {
   return UserProfileTags.fromJson(data is Map<String, dynamic> ? data : {});
 });
 
-final domainSkillsProvider = FutureProvider<List<SkillCard>>((ref) async {
-  final api = ref.read(apiProvider);
-  final json = await api.get(ApiConfig.domainSkills);
-  final data = json['data'];
-  if (data is List) {
-    return data.map((e) => SkillCard.fromJson(e as Map<String, dynamic>)).toList();
-  }
-  return [];
-});
-
 final historyTodayProvider = FutureProvider<HistoryTodayResult>((ref) async {
   final api = ref.read(apiProvider);
   final json = await api.get(ApiConfig.historyToday, timeout: const Duration(seconds: 60));
   final data = json['data'] ?? json;
   return HistoryTodayResult.fromJson(data is Map<String, dynamic> ? data : {});
+});
+
+/// 生活圈分析 Provider
+final neighborhoodProvider = FutureProvider<Map<String, dynamic>>((ref) async {
+  final api = ref.read(apiProvider);
+  final json = await api.get(ApiConfig.neighborhoodProfile, timeout: const Duration(seconds: 60));
+  final data = json['data'] ?? json;
+  return data is Map<String, dynamic> ? data : {};
 });
 
 // 纪念日历会话缓存 — 生成后保持在内存中，用户可在本会话随时查看
@@ -81,3 +80,26 @@ Future<Map<String, dynamic>> refreshAiProducts(ApiClient api) async {
     queryParameters: {'refresh': 'true'},
   );
 }
+
+// ===== 从 ai_service_provider 迁移 =====
+
+/// AI 洞察 Provider
+final aiInsightProvider = FutureProvider<AiInsight>((ref) async {
+  final api = ref.read(apiProvider);
+  final json = await api.get(ApiConfig.aiInsight, timeout: const Duration(seconds: 15));
+  final data = json['data'] ?? json;
+  return AiInsight.fromJson(data is Map<String, dynamic> ? data : {});
+});
+
+/// 最近5条交易 Provider
+final recentTransactionsProvider = FutureProvider<List<Transaction>>((ref) async {
+  final api = ref.read(apiProvider);
+  final list = await api.getList(
+    ApiConfig.transactions,
+    queryParameters: {'limit': '5', 'offset': '0'},
+  );
+  return list.map((e) => Transaction.fromJson(e as Map<String, dynamic>)).toList();
+});
+
+/// 资产加密显示状态 (false = 加密, true = 明文)
+final assetVisibilityProvider = StateProvider<bool>((ref) => false);

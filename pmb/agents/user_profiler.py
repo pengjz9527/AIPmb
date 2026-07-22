@@ -1,8 +1,13 @@
 """用户画像智能体"""
+import asyncio
 from pmb.agents.base import BaseAgent, AgentContext, AgentResult
 
 
 class UserProfilerAgent(BaseAgent):
+
+    managed_skills = [
+        "user_profiling", "neighborhood_profiler", "compute_user_tags",
+    ]
 
     @property
     def agent_id(self) -> str:
@@ -39,7 +44,8 @@ class UserProfilerAgent(BaseAgent):
 
     def can_handle(self, user_message: str) -> float:
         keywords = ["画像", "我是谁", "我的消费", "分析我", "了解我", "怎样的一个人",
-                     "我的风格", "我是怎样的", "人格", "性格", "消费人格"]
+                     "我的风格", "我是怎样的", "人格", "性格", "消费人格", "是什么样",
+                     "什么样的人", "是什么样的人"]
         msg = user_message.lower()
         score = 0.0
         for kw in keywords:
@@ -47,7 +53,57 @@ class UserProfilerAgent(BaseAgent):
                 score += 0.4
         return min(score, 1.0)
 
+    async def analyze_stream(
+        self, context: AgentContext, event_queue: asyncio.Queue
+    ) -> None:
+        """流式分析与响应"""
+        try:
+            await self._analyze_stream_impl(context, event_queue)
+        except Exception as e:
+            await event_queue.put({
+                "type": "error",
+                "content": f"画像分析出错: {str(e)}",
+                "is_final": True,
+            })
+
+    async def _analyze_stream_impl(
+        self, context: AgentContext, event_queue: asyncio.Queue
+    ) -> None:
+        from pmb.llm.context_manager import context_manager
+        from pmb.llm.tool_registry import ALL_TOOLS
+        from pmb.skills.orchestrator import skill_orchestrator
+
+        conv = context_manager.get_or_create(context.session_id)
+
+        enhanced_prompt = self.system_prompt
+        if context.memory_summary:
+            enhanced_prompt += "\n" + context.memory_summary
+        conv.set_system_prompt(enhanced_prompt)
+
+        messages = conv.get_messages()
+        messages.append({"role": "user", "content": context.user_message})
+
+        all_tools = list(ALL_TOOLS) + [
+            t for t in skill_orchestrator.to_openai_tools()
+            if t["function"]["name"] in {
+                "user_profiling", "neighborhood_profiler",
+                "compute_user_tags",
+                "collect_account_data", "collect_consumption_data",
+                "collect_transaction_data",
+            }
+        ]
+
+        content_buffer, _ = await self._run_llm_loop(
+            context, event_queue, messages, all_tools,
+            skill_orchestrator, step_id_prefix="up",
+        )
+
+        conv.add_message("user", context.user_message)
+        conv.add_message("assistant", content_buffer)
+        await self._emit_ai_done(event_queue, content_buffer)
+
     async def analyze(self, context: AgentContext) -> AgentResult:
+        """同步分析（兼容旧接口）"""
         data = await self._collect_data(context)
 
         from pmb.core import consumption_service, transaction_service
@@ -77,7 +133,6 @@ class UserProfilerAgent(BaseAgent):
 
         content = await self._call_llm(context, enhanced_prompt)
 
-        # 生成画像标签
         tags = []
         if subcategory_stats:
             top = subcategory_stats[0]["name"]
@@ -108,5 +163,5 @@ class UserProfilerAgent(BaseAgent):
                     "top_merchants": [s["name"] for s in merchant_stats[:5]],
                 }},
             ],
-            suggested_agents=["financial_planner", "life_assistant"],
+            suggested_agents=["financial_planner", "income_expense_analyst"],
         )

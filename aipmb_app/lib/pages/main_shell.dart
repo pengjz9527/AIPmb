@@ -20,9 +20,9 @@ class MainShell extends StatelessWidget {
             label: '此刻',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.smart_toy_outlined),
-            activeIcon: Icon(Icons.smart_toy, size: 28),
-            label: 'AI服务',
+            icon: Icon(Icons.travel_explore),
+            activeIcon: Icon(Icons.travel_explore, size: 28),
+            label: '探索',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),

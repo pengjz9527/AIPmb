@@ -19,6 +19,17 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   final _serverUrlController = TextEditingController();
   bool _loading = false;
 
+  // 预设环境
+  static const _localUrl = 'http://10.0.2.2:8000';
+  static const _cloudUrl = 'http://39.107.68.177:8000';
+
+  String get _currentEnvLabel {
+    final url = ApiConfig.baseUrl;
+    if (url.startsWith(_localUrl)) return '🏠 本地';
+    if (url.startsWith(_cloudUrl)) return '☁️ 公网';
+    return '🔧 自定义';
+  }
+
   @override
   void initState() {
     super.initState();
@@ -105,18 +116,32 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
               ),
             ),
-            // 服务器地址配置入口（右上角齿轮）
+            // 服务器地址配置入口（右上角）
             Positioned(
               top: 8,
               right: 8,
-              child: IconButton(
-                icon: Icon(
-                  Icons.settings,
-                  color: Colors.grey.shade500,
-                  size: 22,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(20),
+                onTap: _showServerConfigDialog,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Colors.grey.shade300),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.settings, size: 14, color: Colors.grey.shade600),
+                      const SizedBox(width: 4),
+                      Text(
+                        _currentEnvLabel,
+                        style: TextStyle(fontSize: 11, color: Colors.grey.shade700),
+                      ),
+                    ],
+                  ),
                 ),
-                tooltip: '服务器地址设置',
-                onPressed: _showServerConfigDialog,
               ),
             ),
           ],
@@ -158,48 +183,129 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     }
   }
 
-  /// 显示服务器地址配置弹窗
+  /// 显示服务器地址配置弹窗（含快捷切换）
   void _showServerConfigDialog() {
     _serverUrlController.text = ApiConfig.baseUrl;
+    final isLocal = ApiConfig.baseUrl.startsWith(_localUrl);
+    final isCloud = ApiConfig.baseUrl.startsWith(_cloudUrl);
+
     showDialog(
       context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Row(
-          children: [
-            Icon(Icons.dns_outlined, size: 20),
-            SizedBox(width: 8),
-            Text('服务器地址', style: TextStyle(fontSize: 17)),
-          ],
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: _serverUrlController,
-              keyboardType: TextInputType.url,
-              decoration: InputDecoration(
-                labelText: 'API 地址',
-                hintText: '例如 http://192.168.1.100:8000',
-                prefixIcon: const Icon(Icons.link),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                helperText: '手机与电脑需在同一局域网',
-                helperMaxLines: 2,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          title: const Row(
+            children: [
+              Icon(Icons.dns_outlined, size: 20),
+              SizedBox(width: 8),
+              Text('服务器地址', style: TextStyle(fontSize: 17)),
+            ],
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 快捷切换按钮
+              const Text('快速切换', style: TextStyle(fontSize: 12, color: Colors.grey)),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPresetButton(
+                      ctx,
+                      setDialogState,
+                      label: '🏠 本地开发',
+                      subtitle: '10.0.2.2:8000',
+                      url: _localUrl,
+                      active: isLocal,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: _buildPresetButton(
+                      ctx,
+                      setDialogState,
+                      label: '☁️ 公网环境',
+                      subtitle: '39.107.68.177',
+                      url: _cloudUrl,
+                      active: isCloud,
+                    ),
+                  ),
+                ],
               ),
+              const SizedBox(height: 16),
+              const Divider(),
+              const SizedBox(height: 8),
+              // 自定义地址
+              const Text('自定义地址', style: TextStyle(fontSize: 12, color: Colors.grey)),
+              const SizedBox(height: 6),
+              TextField(
+                controller: _serverUrlController,
+                keyboardType: TextInputType.url,
+                decoration: InputDecoration(
+                  hintText: 'http://...',
+                  prefixIcon: const Icon(Icons.link, size: 18),
+                  isDense: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  helperText: '模拟器用 10.0.2.2 访问宿主机',
+                  helperMaxLines: 2,
+                  helperStyle: const TextStyle(fontSize: 10),
+                ),
+                style: const TextStyle(fontSize: 13),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(ctx).pop(),
+              child: const Text('取消'),
+            ),
+            FilledButton(
+              onPressed: () => _saveServerUrl(ctx),
+              child: const Text('保存'),
             ),
           ],
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('取消'),
+      ),
+    );
+  }
+
+  /// 预设环境按钮
+  Widget _buildPresetButton(
+    BuildContext dialogContext,
+    StateSetter setDialogState, {
+    required String label,
+    required String subtitle,
+    required String url,
+    required bool active,
+  }) {
+    return InkWell(
+      onTap: () {
+        _serverUrlController.text = url;
+        setDialogState(() {});
+      },
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+        decoration: BoxDecoration(
+          color: active
+              ? Theme.of(context).colorScheme.primaryContainer
+              : Colors.grey.shade50,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: active
+                ? Theme.of(context).colorScheme.primary
+                : Colors.grey.shade300,
+            width: active ? 1.5 : 0.5,
           ),
-          FilledButton(
-            onPressed: () => _saveServerUrl(ctx),
-            child: const Text('保存'),
-          ),
-        ],
+        ),
+        child: Column(
+          children: [
+            Text(label, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+            const SizedBox(height: 2),
+            Text(subtitle, style: TextStyle(fontSize: 10, color: Colors.grey.shade600)),
+          ],
+        ),
       ),
     );
   }

@@ -8,6 +8,7 @@ import 'package:aipmb_app/providers/recommendation_provider.dart';
 import 'package:aipmb_app/providers/chat_provider.dart';
 import 'package:aipmb_app/providers/held_product_provider.dart';
 import 'package:aipmb_app/providers/risk_assessment_provider.dart';
+import 'package:aipmb_app/providers/agent_provider.dart';
 
 final authProvider =
     StateNotifierProvider<AuthNotifier, AsyncValue<AppUser?>>((ref) {
@@ -85,7 +86,7 @@ class AuthNotifier extends StateNotifier<AsyncValue<AppUser?>> {
     _ref.invalidate(promosProvider);
     _ref.invalidate(productRecommendationsProvider);
     _ref.invalidate(profileTagsProvider);
-    _ref.invalidate(domainSkillsProvider);
+    _ref.invalidate(agentsProvider);
     // 持有产品数据
     _ref.invalidate(heldProductsSummaryProvider);
     _ref.invalidate(heldWealthProductsProvider);

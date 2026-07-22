@@ -6541,5 +6541,61 @@
         "row_count": 0
       }
     ]
+  },
+  {
+    "id": "e51689c4",
+    "skill_name": "financial_planning",
+    "user_name": "彭楫洲",
+    "session_id": "mobile_1784418174786",
+    "invoked_at": "2026-07-18T23:42:59.432454+00:00",
+    "duration_ms": 36,
+    "success": true,
+    "error_message": "",
+    "arguments": {},
+    "result_summary": "已收集理财规划所需数据：4个账户、6个月消费趋势、5款理财+3款基金+3款存款产品",
+    "api_traces": [
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts/summary",
+        "duration_ms": 3,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/accounts",
+        "duration_ms": 0,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/consumptions/stats",
+        "duration_ms": 2,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 10,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 4,
+        "row_count": 0
+      },
+      {
+        "service_name": "api_client",
+        "function_name": "GET /api/v1/products",
+        "duration_ms": 4,
+        "row_count": 0
+      }
+    ]
   }
 ]

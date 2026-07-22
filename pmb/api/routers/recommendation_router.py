@@ -21,12 +21,22 @@ def _decode_user_name(user_name: str) -> str:
         return user_name
 
 
-@router.get("/skills/domain", summary="领域层 Skill 列表")
+@router.get("/skills/domain", summary="Agent 能力入口列表")
 async def get_domain_skills():
-    """获取所有领域层 Skill 的展示信息，用于前端快捷卡片"""
-    from pmb.skills.orchestrator import skill_orchestrator
-    skills = skill_orchestrator.get_domain_skills()
-    return ApiResponse(data=skills)
+    """获取所有 Agent 的能力入口信息，用于前端快捷卡片。
+    已从 Skill 入口迁移为 Agent 入口 — Skill 不再对客直接暴露。"""
+    from pmb.agents.registry import agent_registry
+    agents = agent_registry.list_agents()
+    # 转换为前端 SkillCard 兼容格式（保留 label/description/name 字段）
+    return ApiResponse(data=[
+        {
+            "name": a.agent_id,
+            "label": a.name,
+            "description": a.description,
+            "avatar": a.avatar,
+        }
+        for a in agents
+    ])
 
 
 @router.get("/skills/history-today", summary="历史上的今天")
@@ -35,6 +45,16 @@ async def get_history_today(user_name: str = Header("", alias="x-user-name")):
     user_name = _decode_user_name(user_name)
     from pmb.skills.domain.history_today import HistoryTodaySkill
     skill = HistoryTodaySkill()
+    result = await skill.execute(user_name=user_name)
+    return ApiResponse(data=result.data)
+
+
+@router.get("/skills/neighborhood", summary="生活圈分析")
+async def get_neighborhood(user_name: str = Header("", alias="x-user-name")):
+    """分析用户的居住区域、工作地、常去商户和通勤方式"""
+    user_name = _decode_user_name(user_name)
+    from pmb.skills.domain.neighborhood import NeighborhoodProfilerSkill
+    skill = NeighborhoodProfilerSkill()
     result = await skill.execute(user_name=user_name)
     return ApiResponse(data=result.data)
 

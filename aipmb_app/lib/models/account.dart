@@ -51,12 +51,20 @@ class WealthOverview {
   final double totalLiabilities;
   final double netWorth;
   final List<AccountSummaryItem> breakdown;
+  final double monthlyIncome;
+  final double monthlyExpense;
+  final double lastMonthIncome;
+  final double lastMonthExpense;
 
   const WealthOverview({
     required this.totalAssets,
     required this.totalLiabilities,
     required this.netWorth,
     this.breakdown = const [],
+    this.monthlyIncome = 0,
+    this.monthlyExpense = 0,
+    this.lastMonthIncome = 0,
+    this.lastMonthExpense = 0,
   });
 
   factory WealthOverview.fromJson(Map<String, dynamic> json) {
@@ -74,6 +82,10 @@ class WealthOverview {
       totalLiabilities: parseDouble(json['total_liabilities']),
       netWorth: parseDouble(json['net_worth']),
       breakdown: breakdown,
+      monthlyIncome: parseDouble(json['monthly_income']),
+      monthlyExpense: parseDouble(json['monthly_expense']),
+      lastMonthIncome: parseDouble(json['last_month_income']),
+      lastMonthExpense: parseDouble(json['last_month_expense']),
     );
   }
 }
