@@ -20,7 +20,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   bool _loading = false;
 
   // 预设环境
-  static const _localUrl = 'http://10.0.2.2:8000';
+  static const _localUrl = 'http://10.0.2.2:8001';
   static const _cloudUrl = 'http://39.107.68.177:8000';
 
   String get _currentEnvLabel {
@@ -213,7 +213,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                       ctx,
                       setDialogState,
                       label: '🏠 本地开发',
-                      subtitle: '10.0.2.2:8000',
+                      subtitle: '10.0.2.2:8001',
                       url: _localUrl,
                       active: isLocal,
                     ),

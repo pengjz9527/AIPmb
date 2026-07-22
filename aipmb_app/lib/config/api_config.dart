@@ -1,6 +1,6 @@
 class ApiConfig {
   // Android 模拟器中 10.0.2.2 指向宿主机，真机用户请在登录页点击右上角齿轮修改为电脑 IP
-  static const String _defaultBaseUrl = 'http://10.0.2.2:8000';
+  static const String _defaultBaseUrl = 'http://10.0.2.2:8001';
   static String _baseUrl = _defaultBaseUrl;
 
   /// 当前服务器地址（可从 SharedPreferences 加载或运行时修改）
